@@ -1,0 +1,854 @@
+[
+  {
+    "status_code": 200,
+    "data": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('mehak.seth2023%40gmail.com')/drive/items/$entity",
+      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=bc5f7d12-ca6e-4f00-bd29-216d4fcd9b65&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MDYzODk5In0.cAcHXo4mMY6AMK9QertTrk7D2aXVbfEBZ_-rZvxyw46Dtyh91SM6LXqkoEOg1fotWEIIp6TC_qSItcjPpVbg_knh0ubm6Zpw7Kzj42MNq2U_2zSmgkKD0FmfSx43_mukd6syD-6LxPsWezTKKtHAqqf37GWmcULc6Awm9KU9HgdEJYn9B_vC1HhfwEkNaoLGyExXybKQt9ov2WFOYga4qpiKJaeoZKzsw_BUKGTkjHE0FZXBHGhbZfQyPlgI6VraB-vIaiAPqo2jIAsZ12G5rqsj1BTtKfVx6U7EbL5xPyy4Wh8WAmLOa5AGgkoq2dheQvlXhGVWYsZsIziuU5z5Spa27uaWBmoHmC7YQ5UZybYS4tsyNQS85S3NpVTdd4tlq0D3lvC14GT4Jv1aLrpUb7eudg_WoQJPY7tQE-fu6mvSciyTRm_znSQNyJm8pN9K.8_3UXduwxbCz8mT7n0aXGo6gTwIoZ5GNc9bwLQM7wAw&ApiVersion=2.0",
+      "createdDateTime": "2025-12-06T22:18:36Z",
+      "eTag": "\"{BC5F7D12-CA6E-4F00-BD29-216D4FCD9B65},7\"",
+      "id": "D18A17D89F547423!sbc5f7d12ca6e4f00bd29216d4fcd9b65",
+      "lastModifiedDateTime": "2025-12-06T22:31:28Z",
+      "name": "private_file.txt",
+      "webUrl": "https://onedrive.live.com?cid=d18a17d89f547423&id=D18A17D89F547423!sbc5f7d12ca6e4f00bd29216d4fcd9b65",
+      "cTag": "\"c:{BC5F7D12-CA6E-4F00-BD29-216D4FCD9B65},5\"",
+      "size": 27,
+      "createdBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "parentReference": {
+        "driveType": "personal",
+        "driveId": "d18a17d89f547423",
+        "id": "D18A17D89F547423!sea8cc6beffdb43d7976fbc7da445c639",
+        "name": "Documents",
+        "path": "/drive/root:",
+        "siteId": "f5e5b2d3-56c0-4392-b842-2690530bc054"
+      },
+      "file": {
+        "mimeType": "text/plain",
+        "hashes": {
+          "quickXorHash": "1U4mGucdSATLO4ShF2h8p4kGO4Q="
+        }
+      },
+      "fileSystemInfo": {
+        "createdDateTime": "2025-12-06T22:18:36Z",
+        "lastModifiedDateTime": "2025-12-06T22:31:28Z"
+      },
+      "shared": {
+        "scope": "users",
+        "owner": {
+          "user": {
+            "email": "mehak.seth2023@gmail.com",
+            "id": "d18a17d89f547423",
+            "displayName": "Mehak Seth"
+          }
+        }
+      }
+    }
+  },
+  {
+    "status_code": 200,
+    "data": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('mehak.seth2023%40gmail.com')/drive/items/$entity",
+      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=bc5f7d12-ca6e-4f00-bd29-216d4fcd9b65&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MDYzOTAxIn0.2mTl-_iGDThPSwdlNWD4KpyiwWMgbRcBqM-nETss4Stn-LpDt5n-qyMQg34p9ExBRTmif5vkeUouBA54_XpuhM7FCF8DnphmYfzPS2BxvRGONcaZF6iw1rPlzclHYVx5fS-eFUh6VmwN1r4qdfK7HSjYGefUuqadIpmGp6jl4YUWNRDB2EkL5DbdoHCuA8zoBw-AuPtKp_vltG37rfd5mf1wyW5NAJG0S0AquhZcoicDMayAYI0SrqGANfxZq67Rx91SvNhQbi54qJvFTsuXDEOiEy505PsktN2-aKdf6OJlt5ceu1nc4zgVi7-5lAi0oH0vzFGSbv39WRe034RGz2DzvpsmiaUySJiqtGZ3r7G004fNbdbqjjei18WoUlHVk28yfJHNbxXQjqjXK6eHOJUTJ_LthjHO3b76YXF5YHKxz_jX6dXcApfc8lhV4FNF.3fMx7Jfm8VUHjuBO_VSoI27Ur5YuvuNVSjjref1B45I&ApiVersion=2.0",
+      "createdDateTime": "2025-12-06T22:18:36Z",
+      "eTag": "\"{BC5F7D12-CA6E-4F00-BD29-216D4FCD9B65},8\"",
+      "id": "D18A17D89F547423!sbc5f7d12ca6e4f00bd29216d4fcd9b65",
+      "lastModifiedDateTime": "2025-12-06T22:31:41Z",
+      "name": "private_file.txt",
+      "webUrl": "https://onedrive.live.com?cid=d18a17d89f547423&id=D18A17D89F547423!sbc5f7d12ca6e4f00bd29216d4fcd9b65",
+      "cTag": "\"c:{BC5F7D12-CA6E-4F00-BD29-216D4FCD9B65},6\"",
+      "size": 15,
+      "createdBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "parentReference": {
+        "driveType": "personal",
+        "driveId": "d18a17d89f547423",
+        "id": "D18A17D89F547423!sea8cc6beffdb43d7976fbc7da445c639",
+        "name": "Documents",
+        "path": "/drive/root:",
+        "siteId": "f5e5b2d3-56c0-4392-b842-2690530bc054"
+      },
+      "file": {
+        "mimeType": "text/plain",
+        "hashes": {
+          "quickXorHash": "VIADGcJAhzKQAQRjd4Mb6FAGN9A="
+        }
+      },
+      "fileSystemInfo": {
+        "createdDateTime": "2025-12-06T22:18:36Z",
+        "lastModifiedDateTime": "2025-12-06T22:31:41Z"
+      },
+      "shared": {
+        "scope": "users",
+        "owner": {
+          "user": {
+            "email": "mehak.seth2023@gmail.com",
+            "id": "d18a17d89f547423",
+            "displayName": "Mehak Seth"
+          }
+        }
+      }
+    }
+  },
+  {
+    "status_code": 200,
+    "data": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('mehak.seth2023%40gmail.com')/drive/items/$entity",
+      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=bc5f7d12-ca6e-4f00-bd29-216d4fcd9b65&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MDYzOTAyIn0.5J29o9lN8M-e9RYQhUL6dNj00lBItg7SlE6GDdXXAEQ1gqvojkyNLUxsy5QJtKovRzvtS-SZaOyGp_yUcpt6vJLWljfcpBtP1vO1yxxdNCu3pU03LyR49eZiJn7UlKZ6WTMak45mZqGkAmQzk-s134wJ4NApYP69HHapgxNcYCDscRcbg1gDTHNM5GPc2_8n629SdcZkQAXmlSKLBAOXUjsq7yw-pgMyh38EUrIVLW4AJKuWy9p7UP--g_6E6cIKJAVcqTEz_U6LjkZQeHL0Qv_32H76umXvuwtHJvU7Tw5C2j1CQvsZ7_RYwcor0vsAHxBeHqfOw2_UNVHaJ7-7GDTg0NJ5Nzpqkb31cpC6GSO16AOXp-ToYIdNlzFCKIV9NlQP7cuMfBzJI14o458uSV4U3s5J29QwxOxMKYPoBt5y24aqBy5F415bipH4LWzu.ej342jBWDrIAMupAKZbTtLNx7IoxctRG0xZeo7EMWFI&ApiVersion=2.0",
+      "createdDateTime": "2025-12-06T22:18:36Z",
+      "eTag": "\"{BC5F7D12-CA6E-4F00-BD29-216D4FCD9B65},8\"",
+      "id": "D18A17D89F547423!sbc5f7d12ca6e4f00bd29216d4fcd9b65",
+      "lastModifiedDateTime": "2025-12-06T22:31:41Z",
+      "name": "private_file.txt",
+      "webUrl": "https://onedrive.live.com?cid=d18a17d89f547423&id=D18A17D89F547423!sbc5f7d12ca6e4f00bd29216d4fcd9b65",
+      "cTag": "\"c:{BC5F7D12-CA6E-4F00-BD29-216D4FCD9B65},6\"",
+      "size": 15,
+      "createdBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "parentReference": {
+        "driveType": "personal",
+        "driveId": "d18a17d89f547423",
+        "id": "D18A17D89F547423!sea8cc6beffdb43d7976fbc7da445c639",
+        "name": "Documents",
+        "path": "/drive/root:",
+        "siteId": "f5e5b2d3-56c0-4392-b842-2690530bc054"
+      },
+      "file": {
+        "mimeType": "text/plain",
+        "hashes": {
+          "quickXorHash": "VIADGcJAhzKQAQRjd4Mb6FAGN9A="
+        }
+      },
+      "fileSystemInfo": {
+        "createdDateTime": "2025-12-06T22:18:36Z",
+        "lastModifiedDateTime": "2025-12-06T22:31:41Z"
+      },
+      "shared": {
+        "scope": "users",
+        "owner": {
+          "user": {
+            "email": "mehak.seth2023@gmail.com",
+            "id": "d18a17d89f547423",
+            "displayName": "Mehak Seth"
+          }
+        }
+      }
+    }
+  },
+  {
+    "status_code": 200,
+    "data": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.permission",
+      "id": "6f831aeb-6ca9-4df3-9c26-60c0aa2b26ca",
+      "roles": [
+        "read"
+      ],
+      "shareId": "u!aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9EMThBMTdEODlGNTQ3NDIzL0lRQVNmVi04YnNvQVQ3MHBJVzFQelp0bEFXWUc0aWhiV1pRVDJXRzQ2eldCLUVF",
+      "hasPassword": false,
+      "link": {
+        "scope": "anonymous",
+        "type": "view",
+        "webUrl": "https://1drv.ms/t/c/D18A17D89F547423/IQASfV-8bsoAT70pIW1PzZtlAWYG4ihbWZQT2WG46zWB-EE",
+        "preventsDownload": false
+      }
+    }
+  },
+  {
+    "status_code": 200,
+    "data": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('mehak.seth2023%40gmail.com')/drive/items/$entity",
+      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=0c9feada-5c11-4d0c-a675-1946611c9c9b&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MDYzOTA2In0.K9r1XaqCmyZyfLJjkS15ubkoRoUxkke3SwEbZbvjTiTUE9bootWa-bb1itF4JoVL4jtjf_tfdbO0nICLB149F57e87dD1z4xuHbj9bHtPX16ozzU-W8SggyHiKKV_uPDdJUblWpbMWvkpy6SPHavizZLma6UmTeNXhgu8Hd8p2UVAFebzA52fEm3ZZtenH7wP-pWC9RLK1KTpYY9VVqNBxLDjdrAyRjOri3gMwl2IiMidBICR3Rm_E2TwWxlQSJPwvPr67lqWA4XXX0MXRibHOPug2pGSPBYAfLNIYpSzutHme6t0-7sW6y-rcHF1kqnONWb-qaZ7coWPRmp7sAL4GK4S7FWUpxfRygE39jYWf1iLyvZX5ifIdjkow3h9LstpxMBYWR8I8o2OcW_y60BuAKmCUQ5NZ2QLK2k2Z5GXStUGB2llJz2jMGyfk7HH6mK.TQuhn5J-Cn64hnP_nY5cWuKWoBfEdD2-6B0Ej9_ccmw&ApiVersion=2.0",
+      "createdDateTime": "2025-12-06T22:18:37Z",
+      "eTag": "\"{0C9FEADA-5C11-4D0C-A675-1946611C9C9B},10\"",
+      "id": "D18A17D89F547423!s0c9feada5c114d0ca6751946611c9c9b",
+      "lastModifiedDateTime": "2025-12-06T22:31:30Z",
+      "name": "public_view.txt",
+      "webUrl": "https://onedrive.live.com?cid=d18a17d89f547423&id=D18A17D89F547423!s0c9feada5c114d0ca6751946611c9c9b",
+      "cTag": "\"c:{0C9FEADA-5C11-4D0C-A675-1946611C9C9B},5\"",
+      "size": 41,
+      "createdBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "parentReference": {
+        "driveType": "personal",
+        "driveId": "d18a17d89f547423",
+        "id": "D18A17D89F547423!sea8cc6beffdb43d7976fbc7da445c639",
+        "name": "Documents",
+        "path": "/drive/root:",
+        "siteId": "f5e5b2d3-56c0-4392-b842-2690530bc054"
+      },
+      "file": {
+        "mimeType": "text/plain",
+        "hashes": {
+          "quickXorHash": "R5CQN4ppQVjRtd9SgKAfjghuqSY="
+        }
+      },
+      "fileSystemInfo": {
+        "createdDateTime": "2025-12-06T22:18:37Z",
+        "lastModifiedDateTime": "2025-12-06T22:31:30Z"
+      },
+      "shared": {
+        "scope": "users",
+        "owner": {
+          "user": {
+            "email": "mehak.seth2023@gmail.com",
+            "id": "d18a17d89f547423",
+            "displayName": "Mehak Seth"
+          }
+        }
+      }
+    }
+  },
+  {
+    "status_code": 200,
+    "data": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('mehak.seth2023%40gmail.com')/drive/items/$entity",
+      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=0c9feada-5c11-4d0c-a675-1946611c9c9b&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MDYzOTA4In0.ukvDYAO86Re-7dCiumsgpqad28T1C3Tp1_YpkVpyZ5wGMJ_9rmhiL3_XOeIIK8DP1X54vb5FpNoIfEjdmaNYiGMFFYWqQsK22D7s6jNMDt9cM-FihSCFFYFXG2hVNRLURiTTtryOFKn0r2Y3A8rrLoidcPiOgyyE6FK60Rsi1ERFjNByxyx6MYMbXcEpS3VKNawd9Jq1-gOuEGIPLF0yAShu8iQzae55oeiyCPSYk02xjCbNW7esT05Hr8M3WvIu_ojO89RCfVf7NW5LCeMzy46yjJGOjpS4kUcB0lGaXv-K0eztyISBuau_scNBr_aj3balYn90o3A9hdTKhBCzVgGD6NwGOpt91HKu2TeJtiXfpCHjuQ-AWxlhSoMkCP0-AHISgEoKENel-AV1w5cDCp4IIy0i2QlGvjoIWdOu8QNh9v3wmizQ_BNE8UCz8qbo.sWdMxfxiiv-o_id1H4hTM3cscD0I06KQpYU8F1sY7rI&ApiVersion=2.0",
+      "createdDateTime": "2025-12-06T22:18:37Z",
+      "eTag": "\"{0C9FEADA-5C11-4D0C-A675-1946611C9C9B},11\"",
+      "id": "D18A17D89F547423!s0c9feada5c114d0ca6751946611c9c9b",
+      "lastModifiedDateTime": "2025-12-06T22:31:48Z",
+      "name": "public_view.txt",
+      "webUrl": "https://onedrive.live.com?cid=d18a17d89f547423&id=D18A17D89F547423!s0c9feada5c114d0ca6751946611c9c9b",
+      "cTag": "\"c:{0C9FEADA-5C11-4D0C-A675-1946611C9C9B},6\"",
+      "size": 15,
+      "createdBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "parentReference": {
+        "driveType": "personal",
+        "driveId": "d18a17d89f547423",
+        "id": "D18A17D89F547423!sea8cc6beffdb43d7976fbc7da445c639",
+        "name": "Documents",
+        "path": "/drive/root:",
+        "siteId": "f5e5b2d3-56c0-4392-b842-2690530bc054"
+      },
+      "file": {
+        "mimeType": "text/plain",
+        "hashes": {
+          "quickXorHash": "VIADGcJAhzKQAQRjd4Mb6FAGN9A="
+        }
+      },
+      "fileSystemInfo": {
+        "createdDateTime": "2025-12-06T22:18:37Z",
+        "lastModifiedDateTime": "2025-12-06T22:31:48Z"
+      },
+      "shared": {
+        "scope": "users",
+        "owner": {
+          "user": {
+            "email": "mehak.seth2023@gmail.com",
+            "id": "d18a17d89f547423",
+            "displayName": "Mehak Seth"
+          }
+        }
+      }
+    }
+  },
+  {
+    "status_code": 200,
+    "data": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('mehak.seth2023%40gmail.com')/drive/items/$entity",
+      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=0c9feada-5c11-4d0c-a675-1946611c9c9b&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MDYzOTEwIn0.K6aAdFpfbRtWNMsU_yb5LYlJu2wIyiK8FfVBG5TCnVDB_LWYzojT8Uw2Cb8q6Dce7F-Eo-NkpBcCIyV4RJjH4CmiGJc_WfNOxUin9-HENoe-EPNlgBeFjBZ6xPGDsMWd5N_sm2ghKbGfl6g88g1185h2FveIp2KM2rM_oF2jQ2dXUWuRQXKl2yHfSxR3fdUqztH3PVhgrt8mR4RIx-Ub-xvIaTyY9L8MYnCdve8IQ3izEKTLoCrJut-CQuwBSi7mIu2IBqicYj2davB-J1HrI70TtRNWAogzLc1B_NxQieMCUuIKbFC-ChYkm4aJo3X5wZwR13qNzB6YoJHK2sCd0JMINJnHPODYNYPoIc1fNWwEeFCDrbD1XSgoeQPvVFd0At8Ua7ezAfGI9GgJ6--LGzVFF6XPQtFF-x8XrCAtwpETrv5QRdz0bnMx93rkieDn.nD_xgIQ1iFf_Drobyty88xZpYUM8wPowJanOHckU9yQ&ApiVersion=2.0",
+      "createdDateTime": "2025-12-06T22:18:37Z",
+      "eTag": "\"{0C9FEADA-5C11-4D0C-A675-1946611C9C9B},11\"",
+      "id": "D18A17D89F547423!s0c9feada5c114d0ca6751946611c9c9b",
+      "lastModifiedDateTime": "2025-12-06T22:31:48Z",
+      "name": "public_view.txt",
+      "webUrl": "https://onedrive.live.com?cid=d18a17d89f547423&id=D18A17D89F547423!s0c9feada5c114d0ca6751946611c9c9b",
+      "cTag": "\"c:{0C9FEADA-5C11-4D0C-A675-1946611C9C9B},6\"",
+      "size": 15,
+      "createdBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "parentReference": {
+        "driveType": "personal",
+        "driveId": "d18a17d89f547423",
+        "id": "D18A17D89F547423!sea8cc6beffdb43d7976fbc7da445c639",
+        "name": "Documents",
+        "path": "/drive/root:",
+        "siteId": "f5e5b2d3-56c0-4392-b842-2690530bc054"
+      },
+      "file": {
+        "mimeType": "text/plain",
+        "hashes": {
+          "quickXorHash": "VIADGcJAhzKQAQRjd4Mb6FAGN9A="
+        }
+      },
+      "fileSystemInfo": {
+        "createdDateTime": "2025-12-06T22:18:37Z",
+        "lastModifiedDateTime": "2025-12-06T22:31:48Z"
+      },
+      "shared": {
+        "scope": "users",
+        "owner": {
+          "user": {
+            "email": "mehak.seth2023@gmail.com",
+            "id": "d18a17d89f547423",
+            "displayName": "Mehak Seth"
+          }
+        }
+      }
+    }
+  },
+  {
+    "status_code": 200,
+    "data": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.permission",
+      "id": "cd96148c-1b31-4399-85d6-d94bd8205081",
+      "roles": [
+        "read"
+      ],
+      "shareId": "u!aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9EMThBMTdEODlGNTQ3NDIzL0lRRGE2cDhNRVZ3TVRhWjFHVVpoSEp5YkFjcE43TlhPZVFFY2JJejBmaGxsNzRV",
+      "hasPassword": false,
+      "link": {
+        "scope": "anonymous",
+        "type": "view",
+        "webUrl": "https://1drv.ms/t/c/D18A17D89F547423/IQDa6p8MEVwMTaZ1GUZhHJybAcpN7NXOeQEcbIz0fhll74U",
+        "preventsDownload": false
+      }
+    }
+  },
+  {
+    "status_code": 200,
+    "data": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('mehak.seth2023%40gmail.com')/drive/items/$entity",
+      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=d56acd0f-774c-4441-adb4-28f9eaf53327&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MDYzOTE1In0.6Jmadiglr-yYe7qKSUOE8mRDKCrhBrhXV-134acnbNo83WQMz1_9n3FRqJLuZ8b8iJsvuXczdKez01DlcwgaEuVK99uOZUm1xSz32ielf9k96MY5dlGMT44TG77S52HIrtuLFpdr0t9NDXDAYeXJsIzozrLV0vUfVBvSN4UNU9IqcvrvImjwCh7lT_LG7OLwU1cYU11HlTVL1r8c0AXKi7gdx2GTv3T8sDgQYbTE_7btleBl-Gpl6UIeN8TtHD0gi1vac5mYnXt6Gg6WTqcgwcsM_AqisvmF4lbWJHwix-qDxpVKHSCRFtzmWJSloUcwBPJBVMx8VPrwy0PB9VG-2c7b3Fq54DOMWt5ZyP5N4yYwpicMPGJMDnioqyLi4Smqtb_-HZbDgXYRWF4Hf3xHQtInIzGy-i7s9YKxihOM7wMQ6RjvK-jjnjEw_aGXpNgg.Xafp2XSbgD4aPGeFIUcDxKRdf9TvEVYIU-iGUD34Y9k&ApiVersion=2.0",
+      "createdDateTime": "2025-12-06T22:18:40Z",
+      "eTag": "\"{D56ACD0F-774C-4441-ADB4-28F9EAF53327},10\"",
+      "id": "D18A17D89F547423!sd56acd0f774c4441adb428f9eaf53327",
+      "lastModifiedDateTime": "2025-12-06T22:31:32Z",
+      "name": "public_edit.txt",
+      "webUrl": "https://onedrive.live.com?cid=d18a17d89f547423&id=D18A17D89F547423!sd56acd0f774c4441adb428f9eaf53327",
+      "cTag": "\"c:{D56ACD0F-774C-4441-ADB4-28F9EAF53327},5\"",
+      "size": 37,
+      "createdBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "parentReference": {
+        "driveType": "personal",
+        "driveId": "d18a17d89f547423",
+        "id": "D18A17D89F547423!sea8cc6beffdb43d7976fbc7da445c639",
+        "name": "Documents",
+        "path": "/drive/root:",
+        "siteId": "f5e5b2d3-56c0-4392-b842-2690530bc054"
+      },
+      "file": {
+        "mimeType": "text/plain",
+        "hashes": {
+          "quickXorHash": "R+iwPMV5AVn/BdtkKGESZRvCaaY="
+        }
+      },
+      "fileSystemInfo": {
+        "createdDateTime": "2025-12-06T22:18:40Z",
+        "lastModifiedDateTime": "2025-12-06T22:31:32Z"
+      },
+      "shared": {
+        "scope": "users",
+        "owner": {
+          "user": {
+            "email": "mehak.seth2023@gmail.com",
+            "id": "d18a17d89f547423",
+            "displayName": "Mehak Seth"
+          }
+        }
+      }
+    }
+  },
+  {
+    "status_code": 200,
+    "data": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('mehak.seth2023%40gmail.com')/drive/items/$entity",
+      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=d56acd0f-774c-4441-adb4-28f9eaf53327&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MDYzOTE3In0.Z5FupFoxo8XLrE-COqTM_YOb4IpBwSDIvPrUe3c2GElDgdD1HKbjfJvZ3z0TbD6kGPc9tE1U1csBnwlxZj-7jV-l7txinFoqKIvAL_vwzgksRJDWpzE5ciGS2KZ9zX_evSuyHuRX1N_aB1nnCCVXmS01ZvnEdc34THh-QX_xDRqdDdQq-Z14ZHWeQB7ImnIZ-d1dj5WTtEcuPchAr_5VI66azjZ7WlaLFzYVTifEciKUx9aHMLUbm06z_pHTXt9MeEQmpDQsI1xN8U--SwQptOa8H6mmKjtfeM-pHQH_EZHb5aL3mQYMiGkGqKRiu075cpZX1BgnUDvBC17aLgEysX0J_Go9frUMX1qzt4zmpniQEiUER_jVfdQRmRJNZqmNJvyC6yA3CNTw2oEn5IoHm-X8SyHmt4YkdsQ6ySNsuAlWe0w0q6V5C205DexWWoEI.Kt9qoD5Rbx0EqGRbMWbxcXVlfuWjYugwvXeIOlhnEIE&ApiVersion=2.0",
+      "createdDateTime": "2025-12-06T22:18:40Z",
+      "eTag": "\"{D56ACD0F-774C-4441-ADB4-28F9EAF53327},11\"",
+      "id": "D18A17D89F547423!sd56acd0f774c4441adb428f9eaf53327",
+      "lastModifiedDateTime": "2025-12-06T22:31:58Z",
+      "name": "public_edit.txt",
+      "webUrl": "https://onedrive.live.com?cid=d18a17d89f547423&id=D18A17D89F547423!sd56acd0f774c4441adb428f9eaf53327",
+      "cTag": "\"c:{D56ACD0F-774C-4441-ADB4-28F9EAF53327},6\"",
+      "size": 15,
+      "createdBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "parentReference": {
+        "driveType": "personal",
+        "driveId": "d18a17d89f547423",
+        "id": "D18A17D89F547423!sea8cc6beffdb43d7976fbc7da445c639",
+        "name": "Documents",
+        "path": "/drive/root:",
+        "siteId": "f5e5b2d3-56c0-4392-b842-2690530bc054"
+      },
+      "file": {
+        "mimeType": "text/plain",
+        "hashes": {
+          "quickXorHash": "VIADGcJAhzKQAQRjd4Mb6FAGN9A="
+        }
+      },
+      "fileSystemInfo": {
+        "createdDateTime": "2025-12-06T22:18:40Z",
+        "lastModifiedDateTime": "2025-12-06T22:31:58Z"
+      },
+      "shared": {
+        "scope": "users",
+        "owner": {
+          "user": {
+            "email": "mehak.seth2023@gmail.com",
+            "id": "d18a17d89f547423",
+            "displayName": "Mehak Seth"
+          }
+        }
+      }
+    }
+  },
+  {
+    "status_code": 200,
+    "data": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('mehak.seth2023%40gmail.com')/drive/items/$entity",
+      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=d56acd0f-774c-4441-adb4-28f9eaf53327&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MDYzOTIwIn0.88b_i6kkV1RLbyCjw56nFMZcQwl-byCwsYEkXKwjlZ6fTxtFKNXCdtrHDZjV-sahxeHNb3py0LTcGiRKuads2VGYPU9JbifQ_wrsp1gvY5WGdlsiuuxPfAk56NgqBurrCLOdf9Lvzx07VfnRcdwEJRErGmKOh0l4XhlK3RlRv_6wWdxRli9zxlk3xXAyouk4SzlLZOXIriDaHgZ7Lq4QUbgOKBLl8CPuBgWJUiWcxP1WR-682D2rsIfESabsXXnW3Xrj444u4fR1ImFht6XXGPwLyQZHHWoG07cOIPRQ3Oy2oWBFmPTi0Jno82WIieASlNrE0dWsnPqZuGhAw3hxAuUeqbONthtHeq_V_06vemqQEM2-B0FF83eWKyTejIBP2Jt26e32CZvEg6fHSTn3Pqz644bYWGGaVGuuJhAnw3VyYNJC0Bthcua7BM5hFrWN.v4cbcwst73PaDSBBuCdnyiGBZdNZz0IZrOmIFp1i6bg&ApiVersion=2.0",
+      "createdDateTime": "2025-12-06T22:18:40Z",
+      "eTag": "\"{D56ACD0F-774C-4441-ADB4-28F9EAF53327},11\"",
+      "id": "D18A17D89F547423!sd56acd0f774c4441adb428f9eaf53327",
+      "lastModifiedDateTime": "2025-12-06T22:31:58Z",
+      "name": "public_edit.txt",
+      "webUrl": "https://onedrive.live.com?cid=d18a17d89f547423&id=D18A17D89F547423!sd56acd0f774c4441adb428f9eaf53327",
+      "cTag": "\"c:{D56ACD0F-774C-4441-ADB4-28F9EAF53327},6\"",
+      "size": 15,
+      "createdBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "parentReference": {
+        "driveType": "personal",
+        "driveId": "d18a17d89f547423",
+        "id": "D18A17D89F547423!sea8cc6beffdb43d7976fbc7da445c639",
+        "name": "Documents",
+        "path": "/drive/root:",
+        "siteId": "f5e5b2d3-56c0-4392-b842-2690530bc054"
+      },
+      "file": {
+        "mimeType": "text/plain",
+        "hashes": {
+          "quickXorHash": "VIADGcJAhzKQAQRjd4Mb6FAGN9A="
+        }
+      },
+      "fileSystemInfo": {
+        "createdDateTime": "2025-12-06T22:18:40Z",
+        "lastModifiedDateTime": "2025-12-06T22:31:58Z"
+      },
+      "shared": {
+        "scope": "users",
+        "owner": {
+          "user": {
+            "email": "mehak.seth2023@gmail.com",
+            "id": "d18a17d89f547423",
+            "displayName": "Mehak Seth"
+          }
+        }
+      }
+    }
+  },
+  {
+    "status_code": 200,
+    "data": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.permission",
+      "id": "482a328c-181f-4372-b209-1f475a5194d9",
+      "roles": [
+        "read"
+      ],
+      "shareId": "u!aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9EMThBMTdEODlGNTQ3NDIzL0lRQVB6V3JWVEhkQlJLMjBLUG5xOVRNbkFRUnlmNHBYa2V2el91eVdvV2xLOUZ3",
+      "hasPassword": false,
+      "link": {
+        "scope": "anonymous",
+        "type": "view",
+        "webUrl": "https://1drv.ms/t/c/D18A17D89F547423/IQAPzWrVTHdBRK20KPnq9TMnAQRyf4pXkevz_uyWoWlK9Fw",
+        "preventsDownload": false
+      }
+    }
+  },
+  {
+    "status_code": 200,
+    "data": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('mehak.seth2023%40gmail.com')/drive/items/$entity",
+      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=8b64b03c-43eb-4749-81ea-de816bf87cf8&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MDYzOTI0In0.nePUSmiRcxyfoxW9LY3IJHGBsdaTKFZ8OUdkdNME_gIQdQ6hBfVNqj2RmYhu5nbWS-rgS77za-FQ6hN5XqW8F1bkV1fFQh24iVktomSHZ5T1LX-aZusJdmHlqk7YiC3qB_uK9ta80xifj0TzBLvgc0BGSyIKJk_lM9D07c7I3wiZNjD9F2ti4zm2h4-lCncXeBPKzhEH37idX94IF3VhblQq7vPFEoKkm91p5M1xeKSVJX1RlINiZISNfOBC-8C5UQitoPAh7I97f92QrpsaxiCBOlWeRZW1UQaN65WtZkIQpxWnQ30a7a61zKBJwFgv1VGxaw_DvT4zQpRPptEyIoz26NixZXjp7ed_w9hIsxd4yd-UX-cpw6N6i0cTLVIP8-KetP6Hv0qz2LbtNQacbauImc06dfUwkRGXQw47fLEA8XaXmeQBMsJgGkBnZDor.t-HF-LdqVHh_KiGQurE6_Z970MyksbP_A17DPzKHpnI&ApiVersion=2.0",
+      "createdDateTime": "2025-12-06T22:18:44Z",
+      "eTag": "\"{8B64B03C-43EB-4749-81EA-DE816BF87CF8},12\"",
+      "id": "D18A17D89F547423!s8b64b03c43eb474981eade816bf87cf8",
+      "lastModifiedDateTime": "2025-12-06T22:31:34Z",
+      "name": "collab_file.txt",
+      "webUrl": "https://onedrive.live.com?cid=d18a17d89f547423&id=D18A17D89F547423!s8b64b03c43eb474981eade816bf87cf8",
+      "cTag": "\"c:{8B64B03C-43EB-4749-81EA-DE816BF87CF8},6\"",
+      "size": 48,
+      "createdBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "parentReference": {
+        "driveType": "personal",
+        "driveId": "d18a17d89f547423",
+        "id": "D18A17D89F547423!sea8cc6beffdb43d7976fbc7da445c639",
+        "name": "Documents",
+        "path": "/drive/root:",
+        "siteId": "f5e5b2d3-56c0-4392-b842-2690530bc054"
+      },
+      "file": {
+        "mimeType": "text/plain",
+        "hashes": {
+          "quickXorHash": "Xu6KgMwXA2tihUPzjKO3hAuzIsY="
+        }
+      },
+      "fileSystemInfo": {
+        "createdDateTime": "2025-12-06T22:18:44Z",
+        "lastModifiedDateTime": "2025-12-06T22:31:34Z"
+      },
+      "shared": {
+        "scope": "users",
+        "owner": {
+          "user": {
+            "email": "mehak.seth2023@gmail.com",
+            "id": "d18a17d89f547423",
+            "displayName": "Mehak Seth"
+          }
+        }
+      }
+    }
+  },
+  {
+    "status_code": 200,
+    "data": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('mehak.seth2023%40gmail.com')/drive/items/$entity",
+      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=8b64b03c-43eb-4749-81ea-de816bf87cf8&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MDYzOTI2In0.omEZIY7Jv0eZM2HYazAD-8x2IDwhhe8WB6r0n_WmGPPYIo1rQ1CRy89YC8tKX4zL8ThRvvCd2W-PCLEIRnfSta_nKC5Jb45VpJZBJ-rGYcc5otfjb9UqsEucyceyQnRG8r9WeAhe9HPEFYHhU0HpTVmGctosRHO4sQaJS4sS3qhj-6kmpu96ROKyv39eKIVQaApLqlRJNbPB94uscWJ9xk8ljuPUIUmlO3VwKKjGFDJaIW2xnTqks2_unQMew9Tq9COtAKx9Ed_n6RBXKrL_7JH08s-ipty2sK8OxkYBLqhyT23B3dleceAavQeTx3JvuwYleOM3GvYQUP0Prz0s2A_yzOFuEMtWLGrczPHRISY108gyXFJ0_Wfq-cSmrQdkVxl-YZpws1IlqcPAKPV-ntkBxNy2BIaLfzC9I6ODnWeEruPxOzJbszV8yS5pNcqk.TNzMnEi2nJy9wKGTDp_x2NHyN7Of4mIVtiLyz3ROeYI&ApiVersion=2.0",
+      "createdDateTime": "2025-12-06T22:18:44Z",
+      "eTag": "\"{8B64B03C-43EB-4749-81EA-DE816BF87CF8},13\"",
+      "id": "D18A17D89F547423!s8b64b03c43eb474981eade816bf87cf8",
+      "lastModifiedDateTime": "2025-12-06T22:32:06Z",
+      "name": "collab_file.txt",
+      "webUrl": "https://onedrive.live.com?cid=d18a17d89f547423&id=D18A17D89F547423!s8b64b03c43eb474981eade816bf87cf8",
+      "cTag": "\"c:{8B64B03C-43EB-4749-81EA-DE816BF87CF8},7\"",
+      "size": 15,
+      "createdBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "parentReference": {
+        "driveType": "personal",
+        "driveId": "d18a17d89f547423",
+        "id": "D18A17D89F547423!sea8cc6beffdb43d7976fbc7da445c639",
+        "name": "Documents",
+        "path": "/drive/root:",
+        "siteId": "f5e5b2d3-56c0-4392-b842-2690530bc054"
+      },
+      "file": {
+        "mimeType": "text/plain",
+        "hashes": {
+          "quickXorHash": "VIADGcJAhzKQAQRjd4Mb6FAGN9A="
+        }
+      },
+      "fileSystemInfo": {
+        "createdDateTime": "2025-12-06T22:18:44Z",
+        "lastModifiedDateTime": "2025-12-06T22:32:06Z"
+      },
+      "shared": {
+        "scope": "users",
+        "owner": {
+          "user": {
+            "email": "mehak.seth2023@gmail.com",
+            "id": "d18a17d89f547423",
+            "displayName": "Mehak Seth"
+          }
+        }
+      }
+    }
+  },
+  {
+    "status_code": 200,
+    "data": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('mehak.seth2023%40gmail.com')/drive/items/$entity",
+      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=8b64b03c-43eb-4749-81ea-de816bf87cf8&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MDYzOTI3In0.YDg9Acqut-PL5E9_YRjpozBgIrfijpGjfYpsAqpk32Y9zwXjHC4BsUf2SUn_yY1yxwWIT_riRxIenGiWWed-ayF0TBSBrkVoTQ59vaheR-5qDvB9qZP1E3m-N8aKOkp1gVMgKAr1oGX2rEcRHraALQ7DTtsKMpO4sryUqlE8HwG4ZlFFVqm5lSeTFH-Z5IMEINz--P9_HStcmaNy0tkGh8VX5VdBJF4ODFG-YiFKGdoEqymDRIlQH1oUE7WSiddp2gefoKyZK98WUsy4Hw0uw7qXUIWif3c1rkh7Sy3gMbUxUEJId5wSAc14p-ajdkHg4ppnMsCtOA7p3rGMiHpZzski6-ewn_7q9xRylXAPD60sC_L6APWoDa-WvnDsUasxtjoGQqxdJcPNAgc6Iz4fhmySEtLdi6hfmJ88lHRegRn7h4TrSSNfbzw9p19wG3xi.zDsqZH9GTPV47oeFfhJSUdE7FgBlEyli6JUHQRobT08&ApiVersion=2.0",
+      "createdDateTime": "2025-12-06T22:18:44Z",
+      "eTag": "\"{8B64B03C-43EB-4749-81EA-DE816BF87CF8},13\"",
+      "id": "D18A17D89F547423!s8b64b03c43eb474981eade816bf87cf8",
+      "lastModifiedDateTime": "2025-12-06T22:32:06Z",
+      "name": "collab_file.txt",
+      "webUrl": "https://onedrive.live.com?cid=d18a17d89f547423&id=D18A17D89F547423!s8b64b03c43eb474981eade816bf87cf8",
+      "cTag": "\"c:{8B64B03C-43EB-4749-81EA-DE816BF87CF8},7\"",
+      "size": 15,
+      "createdBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "id": "08f22563-67a6-4b4f-aed4-9497040026db",
+          "displayName": "i:0i.t|ms.sp.ext|08f22563-67a6-4b4f-aed4-9497040026db@9188040d-6c67-4c5b-b112-36a304b66dad"
+        },
+        "user": {
+          "email": "mehak.seth2023@gmail.com",
+          "id": "d18a17d89f547423",
+          "displayName": "Mehak Seth"
+        }
+      },
+      "parentReference": {
+        "driveType": "personal",
+        "driveId": "d18a17d89f547423",
+        "id": "D18A17D89F547423!sea8cc6beffdb43d7976fbc7da445c639",
+        "name": "Documents",
+        "path": "/drive/root:",
+        "siteId": "f5e5b2d3-56c0-4392-b842-2690530bc054"
+      },
+      "file": {
+        "mimeType": "text/plain",
+        "hashes": {
+          "quickXorHash": "VIADGcJAhzKQAQRjd4Mb6FAGN9A="
+        }
+      },
+      "fileSystemInfo": {
+        "createdDateTime": "2025-12-06T22:18:44Z",
+        "lastModifiedDateTime": "2025-12-06T22:32:06Z"
+      },
+      "shared": {
+        "scope": "users",
+        "owner": {
+          "user": {
+            "email": "mehak.seth2023@gmail.com",
+            "id": "d18a17d89f547423",
+            "displayName": "Mehak Seth"
+          }
+        }
+      }
+    }
+  },
+  {
+    "status_code": 200,
+    "data": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.permission",
+      "id": "2439b63d-3007-49b6-8a38-ce1c3d048419",
+      "roles": [
+        "read"
+      ],
+      "shareId": "u!aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9EMThBMTdEODlGNTQ3NDIzL0lRQThzR1NMNjBOSlI0SHEzb0ZyLUh6NEFZaDNSX0cwWTZ1Wkt6UlNpTVRocVpN",
+      "hasPassword": false,
+      "link": {
+        "scope": "anonymous",
+        "type": "view",
+        "webUrl": "https://1drv.ms/t/c/D18A17D89F547423/IQA8sGSL60NJR4Hq3oFr-Hz4AYh3R_G0Y6uZKzRSiMThqZM",
+        "preventsDownload": false
+      }
+    }
+  }
+]

@@ -8,6 +8,7 @@ Main framework for testing authorization enforcement in OneDrive
 import json
 import time
 from datetime import datetime
+import base64
 from policy_model import AuthorizationPolicy
 from onedrive_client import OneDriveClient
 
@@ -31,11 +32,15 @@ class OneDriveTestFramework:
     
     def setup_test_environment(self):
         """
-        Create test files with different visibility levels
-        
-        Note: OneDrive personal accounts have limited sharing options
-        We'll create files and document their actual permissions
+        Create test files with different sharing states:
+        - private_file.txt: no sharing
+        - public_view.txt: anonymous view link
+        - public_edit.txt: anonymous edit link
+        - collab_file.txt: direct invite to collaborator
         """
+        def compute_share_id(web_url):
+            encoded = base64.urlsafe_b64encode(web_url.encode()).decode().rstrip("=")
+            return f"u!{encoded}"
         print("\n" + "=" * 70)
         print("SETTING UP TEST ENVIRONMENT")
         print("=" * 70)
@@ -46,15 +51,15 @@ class OneDriveTestFramework:
             user_data = user_info['data']
             print(f"User: {user_data.get('userPrincipalName', user_data.get('mail', 'Unknown'))}")
         
-        # Create test files for each visibility level
         print("\nCreating test files...")
+        specs = [
+            ("private", "private_file.txt", "This is a private test file"),
+            ("public_view_link", "public_view.txt", "This file is shared with a view-only link"),
+            ("public_edit_link", "public_edit.txt", "This file is shared with an edit link"),
+            ("collab_invite", "collab_file.txt", "This file is shared directly with a collaborator")
+        ]
         
-        visibility_levels = ['private', 'shared', 'org_public', 'public']
-        
-        for visibility in visibility_levels:
-            filename = f"test_{visibility}_file.txt"
-            content = f"This is a {visibility} test file for authorization testing"
-            
+        for visibility, filename, content in specs:
             result = self.client.create_file(filename, content)
             
             if result['status_code'] in [200, 201]:
@@ -64,6 +69,35 @@ class OneDriveTestFramework:
                     'name': filename
                 }
                 print(f"  Created {visibility} file: {file_id[:8]}...")
+                
+                # Apply sharing as needed
+                if visibility == "public_view_link":
+                    share_resp = self.client.share_file(file_id, link_type="view", scope="anonymous")
+                    self.test_files[visibility]["share"] = share_resp
+                    share_id = share_resp["data"].get("shareId")
+                    if not share_id and "link" in share_resp["data"]:
+                        share_id = compute_share_id(share_resp["data"]["link"]["webUrl"])
+                    self.test_files[visibility]["share_id"] = share_id
+                    print(f"    Added view link (status {share_resp['status_code']})")
+                elif visibility == "public_edit_link":
+                    share_resp = self.client.share_file(file_id, link_type="edit", scope="anonymous")
+                    self.test_files[visibility]["share"] = share_resp
+                    share_id = share_resp["data"].get("shareId")
+                    if not share_id and "link" in share_resp["data"]:
+                        share_id = compute_share_id(share_resp["data"]["link"]["webUrl"])
+                    self.test_files[visibility]["share_id"] = share_id
+                    print(f"    Added edit link (status {share_resp['status_code']})")
+                elif visibility == "collab_invite":
+                    invite_resp = self.client.invite_user(file_id, emails=["srinivasmekala1227@gmail.com"], role="write")
+                    self.test_files[visibility]["invite"] = invite_resp
+                    share_id = None
+                    try:
+                        link_url = invite_resp["data"]["value"][0]["link"]["webUrl"]
+                        share_id = compute_share_id(link_url)
+                    except Exception:
+                        pass
+                    self.test_files[visibility]["share_id"] = share_id
+                    print(f"    Invited collaborator (status {invite_resp['status_code']})")
             else:
                 print(f"  ERROR creating {visibility} file: {result['status_code']}")
         
@@ -97,27 +131,41 @@ class OneDriveTestFramework:
             }, None
         
         file_id = self.test_files[visibility]['id']
+        share_id = self.test_files[visibility].get('share_id')
+        use_share = (self.audience != 'owner' and share_id)
         
         # Execute the action on OneDrive
         try:
             if action == 'read':
-                response = self.client.read_file(file_id)
+                if use_share:
+                    response = self.client.read_file_via_share(share_id)
+                else:
+                    response = self.client.read_file(file_id)
             elif action == 'write':
-                response = self.client.update_file(file_id, "Updated content")
+                if use_share:
+                    response = self.client.update_file_via_share(share_id, "Updated content")
+                else:
+                    response = self.client.update_file(file_id, "Updated content")
             elif action == 'delete':
                 # Don't actually delete - just check if we can read (proxy for access)
-                response = self.client.read_file(file_id)
+                if use_share:
+                    response = self.client.read_file_via_share(share_id)
+                else:
+                    response = self.client.read_file(file_id)
             elif action == 'share':
-                response = self.client.share_file(file_id)
+                if use_share:
+                    response = self.client.share_file_via_share(share_id)
+                else:
+                    response = self.client.share_file(file_id)
             else:
                 response = {'status_code': 400}
             
             # Determine actual result based on status code
             # 200, 201 = success (ALLOW)
-            # 403, 404 = forbidden/not found (DENY)
+            # 400, 403, 404 = forbidden/not found/invalid for drive (DENY)
             if response['status_code'] in [200, 201]:
                 actual = 'ALLOW'
-            elif response['status_code'] in [403, 404]:
+            elif response['status_code'] in [400, 403, 404]:
                 print(f"DENY FOR scenario {scenario['scenario_id']}: RESPONSE={response}")
                 actual = 'DENY'
             else:
@@ -148,7 +196,6 @@ class OneDriveTestFramework:
         print("=" * 70 + "\n")
         
         scenarios = self.policy.generate_all_scenarios()
-        # filter scenarios with audience 'owner' only
         scenarios = [s for s in scenarios if s['audience'] == audience]
         total = len(scenarios)
         print(f"Testing {total} scenarios...\n")
@@ -261,6 +308,8 @@ if __name__ == "__main__":
             owner_token = f.read().strip()
         with open("collab_token.txt", "r") as f:
             collab_token = f.read().strip()
+        with open("external_token.txt", "r") as f:
+            external_token = f.read().strip()
     except FileNotFoundError:
         print("\nERROR: token.txt not found!")
         print("Please run: python test_token.py first")
@@ -268,7 +317,8 @@ if __name__ == "__main__":
     
     # Initialize framework
     owner_framework = OneDriveTestFramework(owner_token, audience='owner')
-    collab_framework = OneDriveTestFramework(collab_token, audience='collaborator')
+    invited_framework = OneDriveTestFramework(collab_token, audience='invited_user')
+    normal_framework = OneDriveTestFramework(external_token, audience='normal_user')
     
     # Run tests
     owner_framework.setup_test_environment()
@@ -276,14 +326,19 @@ if __name__ == "__main__":
     test_all = True
     if test_all:
         owner_framework.run_tests(audience='owner')
-        collab_framework.run_tests(audience='collaborator')
+        invited_framework.test_files = owner_framework.test_files
+        normal_framework.test_files = owner_framework.test_files
+        invited_framework.run_tests(audience='invited_user')
+        normal_framework.run_tests(audience='normal_user')
         print("\n" + "=" * 70)
         print("TESTS COMPLETED")
         print("=" * 70 + "\n")
         owner_framework.analyze_results()
         owner_framework.export_results()
-        collab_framework.analyze_results()
-        collab_framework.export_results()
+        invited_framework.analyze_results()
+        invited_framework.export_results()
+        normal_framework.analyze_results()
+        normal_framework.export_results()
     else:
         policy = AuthorizationPolicy()
         scenarios = policy.generate_all_scenarios()

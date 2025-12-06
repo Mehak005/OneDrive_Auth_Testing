@@ -1,0 +1,355 @@
+{
+  "summary": {
+    "total": 16,
+    "passed": 16,
+    "failed": 0,
+    "timestamp": "2025-12-06T17:33:13.956880"
+  },
+  "test_files": {
+    "private": {
+      "id": "D18A17D89F547423!sbc5f7d12ca6e4f00bd29216d4fcd9b65",
+      "name": "private_file.txt"
+    },
+    "public_view_link": {
+      "id": "D18A17D89F547423!s0c9feada5c114d0ca6751946611c9c9b",
+      "name": "public_view.txt",
+      "share": {
+        "status_code": 200,
+        "data": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.permission",
+          "id": "cd96148c-1b31-4399-85d6-d94bd8205081",
+          "roles": [
+            "read"
+          ],
+          "shareId": "u!aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9EMThBMTdEODlGNTQ3NDIzL0lRRGE2cDhNRVZ3TVRhWjFHVVpoSEp5YkFjcE43TlhPZVFFY2JJejBmaGxsNzRV",
+          "hasPassword": false,
+          "link": {
+            "scope": "anonymous",
+            "type": "view",
+            "webUrl": "https://1drv.ms/t/c/D18A17D89F547423/IQDa6p8MEVwMTaZ1GUZhHJybAcpN7NXOeQEcbIz0fhll74U",
+            "preventsDownload": false
+          }
+        }
+      },
+      "share_id": "u!aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9EMThBMTdEODlGNTQ3NDIzL0lRRGE2cDhNRVZ3TVRhWjFHVVpoSEp5YkFjcE43TlhPZVFFY2JJejBmaGxsNzRV"
+    },
+    "public_edit_link": {
+      "id": "D18A17D89F547423!sd56acd0f774c4441adb428f9eaf53327",
+      "name": "public_edit.txt",
+      "share": {
+        "status_code": 200,
+        "data": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.permission",
+          "id": "27fc988b-6c0d-45e1-9f35-fad0b252048b",
+          "roles": [
+            "write"
+          ],
+          "shareId": "u!aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9EMThBMTdEODlGNTQ3NDIzL0lRQVB6V3JWVEhkQlJLMjBLUG5xOVRNbkFmcDl5T0JlNjY3dHVvV2lQajk0R2FV",
+          "hasPassword": false,
+          "link": {
+            "scope": "anonymous",
+            "type": "edit",
+            "webUrl": "https://1drv.ms/t/c/D18A17D89F547423/IQAPzWrVTHdBRK20KPnq9TMnAfp9yOBe667tuoWiPj94GaU",
+            "preventsDownload": false
+          }
+        }
+      },
+      "share_id": "u!aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9EMThBMTdEODlGNTQ3NDIzL0lRQVB6V3JWVEhkQlJLMjBLUG5xOVRNbkFmcDl5T0JlNjY3dHVvV2lQajk0R2FV"
+    },
+    "collab_invite": {
+      "id": "D18A17D89F547423!s8b64b03c43eb474981eade816bf87cf8",
+      "name": "collab_file.txt",
+      "invite": {
+        "status_code": 200,
+        "data": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#Collection(microsoft.graph.permission)",
+          "value": [
+            {
+              "id": "aTowIy5mfG1lbWJlcnNoaXB8c3Jpbml2YXNtZWthbGExMjI3QGdtYWlsLmNvbQ",
+              "roles": [
+                "write"
+              ],
+              "grantedToV2": {
+                "user": {
+                  "@odata.type": "#microsoft.graph.sharePointIdentity",
+                  "displayName": "Srinivas Mekala",
+                  "email": "srinivasmekala1227@gmail.com",
+                  "id": "8025DFA0B90B21BA"
+                }
+              },
+              "grantedTo": {
+                "user": {
+                  "displayName": "Srinivas Mekala",
+                  "email": "srinivasmekala1227@gmail.com",
+                  "id": "8025DFA0B90B21BA"
+                }
+              },
+              "link": {
+                "webUrl": "https://1drv.ms/t/c/d18a17d89f547423/ATywZIvrQ0lHgeregWv4fPg"
+              }
+            }
+          ]
+        }
+      },
+      "share_id": "u!aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9kMThhMTdkODlmNTQ3NDIzL0FUeXdaSXZyUTBsSGdlcmVnV3Y0ZlBn"
+    }
+  },
+  "results": [
+    {
+      "scenario_id": 1,
+      "scenario": {
+        "scenario_id": 1,
+        "audience": "owner",
+        "visibility": "private",
+        "action": "read",
+        "is_owner": true,
+        "has_permission": false,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "timestamp": "2025-12-06T17:31:44.116272"
+    },
+    {
+      "scenario_id": 2,
+      "scenario": {
+        "scenario_id": 2,
+        "audience": "owner",
+        "visibility": "private",
+        "action": "write",
+        "is_owner": true,
+        "has_permission": false,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "timestamp": "2025-12-06T17:31:46.017568"
+    },
+    {
+      "scenario_id": 3,
+      "scenario": {
+        "scenario_id": 3,
+        "audience": "owner",
+        "visibility": "private",
+        "action": "delete",
+        "is_owner": true,
+        "has_permission": false,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "timestamp": "2025-12-06T17:31:47.601309"
+    },
+    {
+      "scenario_id": 4,
+      "scenario": {
+        "scenario_id": 4,
+        "audience": "owner",
+        "visibility": "private",
+        "action": "share",
+        "is_owner": true,
+        "has_permission": false,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "timestamp": "2025-12-06T17:31:49.617064"
+    },
+    {
+      "scenario_id": 5,
+      "scenario": {
+        "scenario_id": 5,
+        "audience": "owner",
+        "visibility": "public_view_link",
+        "action": "read",
+        "is_owner": true,
+        "has_permission": true,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "timestamp": "2025-12-06T17:31:51.436882"
+    },
+    {
+      "scenario_id": 6,
+      "scenario": {
+        "scenario_id": 6,
+        "audience": "owner",
+        "visibility": "public_view_link",
+        "action": "write",
+        "is_owner": true,
+        "has_permission": true,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "timestamp": "2025-12-06T17:31:53.084067"
+    },
+    {
+      "scenario_id": 7,
+      "scenario": {
+        "scenario_id": 7,
+        "audience": "owner",
+        "visibility": "public_view_link",
+        "action": "delete",
+        "is_owner": true,
+        "has_permission": true,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "timestamp": "2025-12-06T17:31:55.464804"
+    },
+    {
+      "scenario_id": 8,
+      "scenario": {
+        "scenario_id": 8,
+        "audience": "owner",
+        "visibility": "public_view_link",
+        "action": "share",
+        "is_owner": true,
+        "has_permission": true,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "timestamp": "2025-12-06T17:31:57.729379"
+    },
+    {
+      "scenario_id": 9,
+      "scenario": {
+        "scenario_id": 9,
+        "audience": "owner",
+        "visibility": "public_edit_link",
+        "action": "read",
+        "is_owner": true,
+        "has_permission": true,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "timestamp": "2025-12-06T17:32:00.150340"
+    },
+    {
+      "scenario_id": 10,
+      "scenario": {
+        "scenario_id": 10,
+        "audience": "owner",
+        "visibility": "public_edit_link",
+        "action": "write",
+        "is_owner": true,
+        "has_permission": true,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "timestamp": "2025-12-06T17:32:02.504169"
+    },
+    {
+      "scenario_id": 11,
+      "scenario": {
+        "scenario_id": 11,
+        "audience": "owner",
+        "visibility": "public_edit_link",
+        "action": "delete",
+        "is_owner": true,
+        "has_permission": true,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "timestamp": "2025-12-06T17:32:04.695115"
+    },
+    {
+      "scenario_id": 12,
+      "scenario": {
+        "scenario_id": 12,
+        "audience": "owner",
+        "visibility": "public_edit_link",
+        "action": "share",
+        "is_owner": true,
+        "has_permission": true,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "timestamp": "2025-12-06T17:32:07.098920"
+    },
+    {
+      "scenario_id": 13,
+      "scenario": {
+        "scenario_id": 13,
+        "audience": "owner",
+        "visibility": "collab_invite",
+        "action": "read",
+        "is_owner": true,
+        "has_permission": false,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "timestamp": "2025-12-06T17:32:08.891336"
+    },
+    {
+      "scenario_id": 14,
+      "scenario": {
+        "scenario_id": 14,
+        "audience": "owner",
+        "visibility": "collab_invite",
+        "action": "write",
+        "is_owner": true,
+        "has_permission": false,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "timestamp": "2025-12-06T17:32:10.639634"
+    },
+    {
+      "scenario_id": 15,
+      "scenario": {
+        "scenario_id": 15,
+        "audience": "owner",
+        "visibility": "collab_invite",
+        "action": "delete",
+        "is_owner": true,
+        "has_permission": false,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "timestamp": "2025-12-06T17:32:12.506153"
+    },
+    {
+      "scenario_id": 16,
+      "scenario": {
+        "scenario_id": 16,
+        "audience": "owner",
+        "visibility": "collab_invite",
+        "action": "share",
+        "is_owner": true,
+        "has_permission": false,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "passed": true,
+      "timestamp": "2025-12-06T17:32:14.352201"
+    }
+  ]
+}

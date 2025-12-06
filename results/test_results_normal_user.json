@@ -1,0 +1,355 @@
+{
+  "summary": {
+    "total": 16,
+    "passed": 13,
+    "failed": 3,
+    "timestamp": "2025-12-06T17:33:13.960605"
+  },
+  "test_files": {
+    "private": {
+      "id": "D18A17D89F547423!sbc5f7d12ca6e4f00bd29216d4fcd9b65",
+      "name": "private_file.txt"
+    },
+    "public_view_link": {
+      "id": "D18A17D89F547423!s0c9feada5c114d0ca6751946611c9c9b",
+      "name": "public_view.txt",
+      "share": {
+        "status_code": 200,
+        "data": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.permission",
+          "id": "cd96148c-1b31-4399-85d6-d94bd8205081",
+          "roles": [
+            "read"
+          ],
+          "shareId": "u!aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9EMThBMTdEODlGNTQ3NDIzL0lRRGE2cDhNRVZ3TVRhWjFHVVpoSEp5YkFjcE43TlhPZVFFY2JJejBmaGxsNzRV",
+          "hasPassword": false,
+          "link": {
+            "scope": "anonymous",
+            "type": "view",
+            "webUrl": "https://1drv.ms/t/c/D18A17D89F547423/IQDa6p8MEVwMTaZ1GUZhHJybAcpN7NXOeQEcbIz0fhll74U",
+            "preventsDownload": false
+          }
+        }
+      },
+      "share_id": "u!aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9EMThBMTdEODlGNTQ3NDIzL0lRRGE2cDhNRVZ3TVRhWjFHVVpoSEp5YkFjcE43TlhPZVFFY2JJejBmaGxsNzRV"
+    },
+    "public_edit_link": {
+      "id": "D18A17D89F547423!sd56acd0f774c4441adb428f9eaf53327",
+      "name": "public_edit.txt",
+      "share": {
+        "status_code": 200,
+        "data": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.permission",
+          "id": "27fc988b-6c0d-45e1-9f35-fad0b252048b",
+          "roles": [
+            "write"
+          ],
+          "shareId": "u!aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9EMThBMTdEODlGNTQ3NDIzL0lRQVB6V3JWVEhkQlJLMjBLUG5xOVRNbkFmcDl5T0JlNjY3dHVvV2lQajk0R2FV",
+          "hasPassword": false,
+          "link": {
+            "scope": "anonymous",
+            "type": "edit",
+            "webUrl": "https://1drv.ms/t/c/D18A17D89F547423/IQAPzWrVTHdBRK20KPnq9TMnAfp9yOBe667tuoWiPj94GaU",
+            "preventsDownload": false
+          }
+        }
+      },
+      "share_id": "u!aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9EMThBMTdEODlGNTQ3NDIzL0lRQVB6V3JWVEhkQlJLMjBLUG5xOVRNbkFmcDl5T0JlNjY3dHVvV2lQajk0R2FV"
+    },
+    "collab_invite": {
+      "id": "D18A17D89F547423!s8b64b03c43eb474981eade816bf87cf8",
+      "name": "collab_file.txt",
+      "invite": {
+        "status_code": 200,
+        "data": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#Collection(microsoft.graph.permission)",
+          "value": [
+            {
+              "id": "aTowIy5mfG1lbWJlcnNoaXB8c3Jpbml2YXNtZWthbGExMjI3QGdtYWlsLmNvbQ",
+              "roles": [
+                "write"
+              ],
+              "grantedToV2": {
+                "user": {
+                  "@odata.type": "#microsoft.graph.sharePointIdentity",
+                  "displayName": "Srinivas Mekala",
+                  "email": "srinivasmekala1227@gmail.com",
+                  "id": "8025DFA0B90B21BA"
+                }
+              },
+              "grantedTo": {
+                "user": {
+                  "displayName": "Srinivas Mekala",
+                  "email": "srinivasmekala1227@gmail.com",
+                  "id": "8025DFA0B90B21BA"
+                }
+              },
+              "link": {
+                "webUrl": "https://1drv.ms/t/c/d18a17d89f547423/ATywZIvrQ0lHgeregWv4fPg"
+              }
+            }
+          ]
+        }
+      },
+      "share_id": "u!aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9kMThhMTdkODlmNTQ3NDIzL0FUeXdaSXZyUTBsSGdlcmVnV3Y0ZlBn"
+    }
+  },
+  "results": [
+    {
+      "scenario_id": 33,
+      "scenario": {
+        "scenario_id": 33,
+        "audience": "normal_user",
+        "visibility": "private",
+        "action": "read",
+        "is_owner": false,
+        "has_permission": false,
+        "expected": "DENY"
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "timestamp": "2025-12-06T17:32:46.629022"
+    },
+    {
+      "scenario_id": 34,
+      "scenario": {
+        "scenario_id": 34,
+        "audience": "normal_user",
+        "visibility": "private",
+        "action": "write",
+        "is_owner": false,
+        "has_permission": false,
+        "expected": "DENY"
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "timestamp": "2025-12-06T17:32:47.940488"
+    },
+    {
+      "scenario_id": 35,
+      "scenario": {
+        "scenario_id": 35,
+        "audience": "normal_user",
+        "visibility": "private",
+        "action": "delete",
+        "is_owner": false,
+        "has_permission": false,
+        "expected": "DENY"
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "timestamp": "2025-12-06T17:32:49.113247"
+    },
+    {
+      "scenario_id": 36,
+      "scenario": {
+        "scenario_id": 36,
+        "audience": "normal_user",
+        "visibility": "private",
+        "action": "share",
+        "is_owner": false,
+        "has_permission": false,
+        "expected": "DENY"
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "timestamp": "2025-12-06T17:32:50.506795"
+    },
+    {
+      "scenario_id": 37,
+      "scenario": {
+        "scenario_id": 37,
+        "audience": "normal_user",
+        "visibility": "public_view_link",
+        "action": "read",
+        "is_owner": false,
+        "has_permission": true,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "DENY",
+      "passed": false,
+      "timestamp": "2025-12-06T17:32:52.236673"
+    },
+    {
+      "scenario_id": 38,
+      "scenario": {
+        "scenario_id": 38,
+        "audience": "normal_user",
+        "visibility": "public_view_link",
+        "action": "write",
+        "is_owner": false,
+        "has_permission": true,
+        "expected": "DENY"
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "timestamp": "2025-12-06T17:32:54.837518"
+    },
+    {
+      "scenario_id": 39,
+      "scenario": {
+        "scenario_id": 39,
+        "audience": "normal_user",
+        "visibility": "public_view_link",
+        "action": "delete",
+        "is_owner": false,
+        "has_permission": true,
+        "expected": "DENY"
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "timestamp": "2025-12-06T17:32:56.674616"
+    },
+    {
+      "scenario_id": 40,
+      "scenario": {
+        "scenario_id": 40,
+        "audience": "normal_user",
+        "visibility": "public_view_link",
+        "action": "share",
+        "is_owner": false,
+        "has_permission": true,
+        "expected": "DENY"
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "timestamp": "2025-12-06T17:32:58.453144"
+    },
+    {
+      "scenario_id": 41,
+      "scenario": {
+        "scenario_id": 41,
+        "audience": "normal_user",
+        "visibility": "public_edit_link",
+        "action": "read",
+        "is_owner": false,
+        "has_permission": true,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "DENY",
+      "passed": false,
+      "timestamp": "2025-12-06T17:33:00.435103"
+    },
+    {
+      "scenario_id": 42,
+      "scenario": {
+        "scenario_id": 42,
+        "audience": "normal_user",
+        "visibility": "public_edit_link",
+        "action": "write",
+        "is_owner": false,
+        "has_permission": true,
+        "expected": "ALLOW"
+      },
+      "expected": "ALLOW",
+      "actual": "DENY",
+      "passed": false,
+      "timestamp": "2025-12-06T17:33:02.373464"
+    },
+    {
+      "scenario_id": 43,
+      "scenario": {
+        "scenario_id": 43,
+        "audience": "normal_user",
+        "visibility": "public_edit_link",
+        "action": "delete",
+        "is_owner": false,
+        "has_permission": true,
+        "expected": "DENY"
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "timestamp": "2025-12-06T17:33:04.399001"
+    },
+    {
+      "scenario_id": 44,
+      "scenario": {
+        "scenario_id": 44,
+        "audience": "normal_user",
+        "visibility": "public_edit_link",
+        "action": "share",
+        "is_owner": false,
+        "has_permission": true,
+        "expected": "DENY"
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "timestamp": "2025-12-06T17:33:06.509112"
+    },
+    {
+      "scenario_id": 45,
+      "scenario": {
+        "scenario_id": 45,
+        "audience": "normal_user",
+        "visibility": "collab_invite",
+        "action": "read",
+        "is_owner": false,
+        "has_permission": false,
+        "expected": "DENY"
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "timestamp": "2025-12-06T17:33:08.262894"
+    },
+    {
+      "scenario_id": 46,
+      "scenario": {
+        "scenario_id": 46,
+        "audience": "normal_user",
+        "visibility": "collab_invite",
+        "action": "write",
+        "is_owner": false,
+        "has_permission": false,
+        "expected": "DENY"
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "timestamp": "2025-12-06T17:33:09.766818"
+    },
+    {
+      "scenario_id": 47,
+      "scenario": {
+        "scenario_id": 47,
+        "audience": "normal_user",
+        "visibility": "collab_invite",
+        "action": "delete",
+        "is_owner": false,
+        "has_permission": false,
+        "expected": "DENY"
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "timestamp": "2025-12-06T17:33:11.409809"
+    },
+    {
+      "scenario_id": 48,
+      "scenario": {
+        "scenario_id": 48,
+        "audience": "normal_user",
+        "visibility": "collab_invite",
+        "action": "share",
+        "is_owner": false,
+        "has_permission": false,
+        "expected": "DENY"
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "passed": true,
+      "timestamp": "2025-12-06T17:33:13.205981"
+    }
+  ]
+}

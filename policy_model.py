@@ -2,19 +2,19 @@
 """
 Authorization Policy Model for OneDrive
 
-Defines the correct authorization rules for personal OneDrive based on:
-- Audience: who is accessing (owner, anon_link_viewer, anon_link_editor, invited_user)
-- Visibility: file scope (private, shared_link_view, shared_link_edit, direct_share_specific)
-- Action: what they're trying to do (read, write, delete, share)
-- Context: additional factors (is_owner, has_permission)
+Defines expected authorization rules for a *personal* OneDrive test matrix:
+- Audiences: owner, invited_user (abc@example.com), normal_user (no sharing)
+- Visibilities: private file, public view link, public edit link, direct invite
+- Actions: read, write, delete, share
+- Context: whether the audience effectively has permission for that visibility
 """
 
 class AuthorizationPolicy:
     """Defines expected authorization behavior"""
     
     # Define possible values for each factor (personal OneDrive only)
-    AUDIENCES = ['owner', 'anon_link_viewer', 'anon_link_editor', 'invited_user']
-    VISIBILITY_LEVELS = ['private', 'shared_link_view', 'shared_link_edit', 'direct_share_specific']
+    AUDIENCES = ['owner', 'invited_user', 'normal_user']
+    VISIBILITY_LEVELS = ['private', 'public_view_link', 'public_edit_link', 'collab_invite']
     ACTIONS = ['read', 'write', 'delete', 'share']
     
     def evaluate(self, audience, visibility, action, is_owner=False, 
@@ -23,8 +23,8 @@ class AuthorizationPolicy:
         Evaluate if an action should be allowed based on policy rules.
         
         Args:
-            audience: Type of user (owner, anon_link_viewer, anon_link_editor, invited_user)
-            visibility: File visibility (private, shared_link_view, shared_link_edit, direct_share_specific)
+            audience: Type of user (owner, invited_user, normal_user)
+            visibility: File visibility (private, public_view_link, public_edit_link, collab_invite)
             action: What action is being attempted (read, write, delete, share)
             is_owner: Is the user the file owner?
             has_permission: Does user have permission via link/invite?
@@ -48,26 +48,23 @@ class AuthorizationPolicy:
             else:
                 return 'DENY'
         
-        # Rule 3: View-only anonymous link
-        if visibility == 'shared_link_view':
+        # Rule 3: View-only link (anyone with link can read)
+        if visibility == 'public_view_link':
             if has_permission and action == 'read':
                 return 'ALLOW'
-            else:
-                return 'DENY'
+            return 'DENY'
         
-        # Rule 4: Edit anonymous link
-        if visibility == 'shared_link_edit':
+        # Rule 4: Edit link (anyone with link can read/write)
+        if visibility == 'public_edit_link':
             if has_permission and action in ['read', 'write']:
                 return 'ALLOW'
-            else:
-                return 'DENY'
+            return 'DENY'
         
-        # Rule 5: Direct share to specific invitees
-        if visibility == 'direct_share_specific':
+        # Rule 5: Direct invite to collaborator
+        if visibility == 'collab_invite':
             if has_permission and action in ['read', 'write']:
                 return 'ALLOW'
-            else:
-                return 'DENY'
+            return 'DENY'
         
         # Rule 6: Default deny
         return 'DENY'
@@ -87,12 +84,17 @@ class AuthorizationPolicy:
                 for action in self.ACTIONS:
                     # Determine context based on audience and visibility
                     is_owner = (audience == 'owner')
-                    # Permission comes from matching link/invite for the visibility
-                    has_permission = (
-                        (visibility == 'shared_link_view' and audience == 'anon_link_viewer') or
-                        (visibility == 'shared_link_edit' and audience == 'anon_link_editor') or
-                        (visibility == 'direct_share_specific' and audience == 'invited_user')
-                    )
+                    # Permissions are granted by the sharing model:
+                    # - public_view_link: anyone with link can read
+                    # - public_edit_link: anyone with link can read/write
+                    # - collab_invite: only invited_user has read/write
+                    has_permission = False
+                    if visibility == 'public_view_link':
+                        has_permission = True  # link is broadly usable
+                    elif visibility == 'public_edit_link':
+                        has_permission = True  # link grants edit
+                    elif visibility == 'collab_invite' and audience == 'invited_user':
+                        has_permission = True
                     
                     # Get expected result from policy
                     expected = self.evaluate(
@@ -131,13 +133,13 @@ if __name__ == "__main__":
     result = policy.evaluate('owner', 'private', 'read', is_owner=True)
     print(f"Owner reads private file: {result}")  # Should be ALLOW
     
-    # Test 2: Anon viewer reads shared link
-    result = policy.evaluate('anon_link_viewer', 'shared_link_view', 'read', has_permission=True)
-    print(f"Anon viewer reads shared link: {result}")  # Should be ALLOW
+    # Test 2: Normal user reads view link
+    result = policy.evaluate('normal_user', 'public_view_link', 'read', has_permission=True)
+    print(f"Normal user reads public view link: {result}")  # Should be ALLOW
     
-    # Test 3: Anon viewer writes shared view link
-    result = policy.evaluate('anon_link_viewer', 'shared_link_view', 'write', has_permission=True)
-    print(f"Anon viewer writes shared view link: {result}")  # Should be DENY
+    # Test 3: Normal user writes view link
+    result = policy.evaluate('normal_user', 'public_view_link', 'write', has_permission=True)
+    print(f"Normal user writes public view link: {result}")  # Should be DENY
     
     # Generate all scenarios
     scenarios = policy.generate_all_scenarios()
