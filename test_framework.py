@@ -15,13 +15,14 @@ from onedrive_client import OneDriveClient
 class OneDriveTestFramework:
     """Framework for testing OneDrive authorization"""
     
-    def __init__(self, access_token):
+    def __init__(self, access_token, audience):
         """
         Initialize test framework
         
         Args:
             access_token: Microsoft Graph API access token
         """
+        self.audience = audience
         self.policy = AuthorizationPolicy()
         self.client = OneDriveClient(access_token)
         self.test_results = []
@@ -140,14 +141,15 @@ class OneDriveTestFramework:
         
         return result, response
     
-    def run_all_tests(self):
+    def run_tests(self, audience):
         """Run tests for all scenarios"""
         print("\n" + "=" * 70)
-        print("RUNNING AUTHORIZATION TESTS")
+        print(f"RUNNING AUTHORIZATION TESTS for audience: {audience}")
         print("=" * 70 + "\n")
         
         scenarios = self.policy.generate_all_scenarios()
-        
+        # filter scenarios with audience 'owner' only
+        scenarios = [s for s in scenarios if s['audience'] == audience]
         total = len(scenarios)
         print(f"Testing {total} scenarios...\n")
         
@@ -159,13 +161,11 @@ class OneDriveTestFramework:
             
             # Print progress
             status = "PASS" if result['passed'] else "FAIL"
-            if i % 10 == 0:
-                print(f"Progress: {i}/{total} scenarios tested...")
+            # if i % 10 == 0:
+        print(f"For {audience}: {total} scenarios tested...")
         
-        print(f"\nCompleted: {total}/{total} scenarios tested")
-        print("\n" + "=" * 70)
-        print("TESTS COMPLETED")
-        print("=" * 70 + "\n")
+        # print(f"\nCompleted: {total}/{total} scenarios tested")
+        
     
     def analyze_results(self):
         """Analyze and print test results"""
@@ -216,7 +216,8 @@ class OneDriveTestFramework:
         else:
             print("\nNo bugs found - all tests passed!")
     
-    def export_results(self, filename='results/test_results.json'):
+    def export_results(self):
+        filename=f'results/test_results_{self.audience}.json'
         """
         Export results to JSON file
         
@@ -243,7 +244,7 @@ class OneDriveTestFramework:
         with open(filename, 'w') as f:
             json.dump(export_data, f, indent=2)
         
-        with open('results/test_api_responses.json', 'w') as f:
+        with open(f'results/test_api_responses_{self.audience}.json', 'w') as f:
             json.dump([r for r in self.test_api_responses], f, indent=2)
         
         print(f"\nResults exported to: {filename}")
@@ -256,29 +257,38 @@ if __name__ == "__main__":
     
     # Load access token
     try:
-        with open('token.txt', 'r') as f:
-            token = f.read().strip()
+        with open('owner_token.txt', 'r') as f:
+            owner_token = f.read().strip()
+        with open("collab_token.txt", "r") as f:
+            collab_token = f.read().strip()
     except FileNotFoundError:
         print("\nERROR: token.txt not found!")
         print("Please run: python test_token.py first")
         exit(1)
     
     # Initialize framework
-    framework = OneDriveTestFramework(token)
+    owner_framework = OneDriveTestFramework(owner_token, audience='owner')
+    collab_framework = OneDriveTestFramework(collab_token, audience='collaborator')
     
     # Run tests
-    framework.setup_test_environment()
+    owner_framework.setup_test_environment()
     time.sleep(2)  # Give OneDrive time to process files
     test_all = True
     if test_all:
-        framework.run_all_tests()
-        framework.analyze_results()
-        framework.export_results()
+        owner_framework.run_tests(audience='owner')
+        collab_framework.run_tests(audience='collaborator')
+        print("\n" + "=" * 70)
+        print("TESTS COMPLETED")
+        print("=" * 70 + "\n")
+        owner_framework.analyze_results()
+        owner_framework.export_results()
+        collab_framework.analyze_results()
+        collab_framework.export_results()
     else:
         policy = AuthorizationPolicy()
         scenarios = policy.generate_all_scenarios()
         scenario = scenarios[0]  # Test first scenario only
-        result = framework.test_scenario(scenario)
+        result = owner_framework.test_scenario(scenario)
         print("\nSingle Scenario Test Result:")
         print(json.dumps(result, indent=2))
     
