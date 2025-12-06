@@ -2,19 +2,19 @@
 """
 Authorization Policy Model for OneDrive
 
-Defines the correct authorization rules based on:
-- Audience: who is accessing (owner, collaborator, org_member, external)
-- Visibility: file scope (private, shared, org_public, public)
+Defines the correct authorization rules for personal OneDrive based on:
+- Audience: who is accessing (owner, anon_link_viewer, anon_link_editor, invited_user)
+- Visibility: file scope (private, shared_link_view, shared_link_edit, direct_share_specific)
 - Action: what they're trying to do (read, write, delete, share)
-- Context: additional factors (is_owner, has_permission, same_org)
+- Context: additional factors (is_owner, has_permission)
 """
 
 class AuthorizationPolicy:
     """Defines expected authorization behavior"""
     
-    # Define possible values for each factor
-    AUDIENCES = ['owner', 'collaborator', 'org_member', 'external']
-    VISIBILITY_LEVELS = ['private', 'shared', 'org_public', 'public']
+    # Define possible values for each factor (personal OneDrive only)
+    AUDIENCES = ['owner', 'anon_link_viewer', 'anon_link_editor', 'invited_user']
+    VISIBILITY_LEVELS = ['private', 'shared_link_view', 'shared_link_edit', 'direct_share_specific']
     ACTIONS = ['read', 'write', 'delete', 'share']
     
     def evaluate(self, audience, visibility, action, is_owner=False, 
@@ -23,12 +23,12 @@ class AuthorizationPolicy:
         Evaluate if an action should be allowed based on policy rules.
         
         Args:
-            audience: Type of user (owner, collaborator, org_member, external)
-            visibility: File visibility (private, shared, org_public, public)
+            audience: Type of user (owner, anon_link_viewer, anon_link_editor, invited_user)
+            visibility: File visibility (private, shared_link_view, shared_link_edit, direct_share_specific)
             action: What action is being attempted (read, write, delete, share)
             is_owner: Is the user the file owner?
-            has_permission: Does user have explicit permission?
-            same_org: Is user in same organization as owner?
+            has_permission: Does user have permission via link/invite?
+            same_org: Unused for personal drives (kept for signature compatibility)
         
         Returns:
             'ALLOW' or 'DENY'
@@ -38,39 +38,34 @@ class AuthorizationPolicy:
         if is_owner:
             return 'ALLOW'
         
-        # Rule 2: Public files - everyone can read, only owner can modify
-        if visibility == 'public':
-            if action == 'read':
-                return 'ALLOW'
-            else:
-                return 'DENY'  # Only owner can write/delete/share public files
-        
-        # Rule 3: Org-public files - org members can read
-        if visibility == 'org_public':
-            if same_org and action == 'read':
-                return 'ALLOW'
-            elif same_org and action == 'write':
-                return 'ALLOW'  # Org members can edit org-public files
-            else:
-                return 'DENY'
-        
-        # Rule 4: Shared files - requires explicit permission
-        if visibility == 'shared':
-            if has_permission:
-                if action in ['read', 'write']:
-                    return 'ALLOW'
-                else:
-                    return 'DENY'  # Can't delete or share
-            else:
-                return 'DENY'
-        
-        # Rule 5: Private files - only owner and those with permission
+        # Rule 2: Private files - only owner and explicit invitees
         if visibility == 'private':
             if has_permission:
                 if action in ['read', 'write']:
                     return 'ALLOW'
                 else:
-                    return 'DENY'  # Collaborators can't delete or share
+                    return 'DENY'  # Non-owners shouldn't delete/share
+            else:
+                return 'DENY'
+        
+        # Rule 3: View-only anonymous link
+        if visibility == 'shared_link_view':
+            if has_permission and action == 'read':
+                return 'ALLOW'
+            else:
+                return 'DENY'
+        
+        # Rule 4: Edit anonymous link
+        if visibility == 'shared_link_edit':
+            if has_permission and action in ['read', 'write']:
+                return 'ALLOW'
+            else:
+                return 'DENY'
+        
+        # Rule 5: Direct share to specific invitees
+        if visibility == 'direct_share_specific':
+            if has_permission and action in ['read', 'write']:
+                return 'ALLOW'
             else:
                 return 'DENY'
         
@@ -79,7 +74,7 @@ class AuthorizationPolicy:
     
     def generate_all_scenarios(self):
         """
-        Generate all possible test scenarios (4x4x4 = 64 combinations)
+        Generate all possible test scenarios (personal OneDrive)
         
         Returns:
             List of scenario dictionaries
@@ -92,8 +87,12 @@ class AuthorizationPolicy:
                 for action in self.ACTIONS:
                     # Determine context based on audience and visibility
                     is_owner = (audience == 'owner')
-                    same_org = (audience in ['owner', 'org_member'])
-                    has_permission = (audience == 'collaborator')
+                    # Permission comes from matching link/invite for the visibility
+                    has_permission = (
+                        (visibility == 'shared_link_view' and audience == 'anon_link_viewer') or
+                        (visibility == 'shared_link_edit' and audience == 'anon_link_editor') or
+                        (visibility == 'direct_share_specific' and audience == 'invited_user')
+                    )
                     
                     # Get expected result from policy
                     expected = self.evaluate(
@@ -102,7 +101,7 @@ class AuthorizationPolicy:
                         action=action,
                         is_owner=is_owner,
                         has_permission=has_permission,
-                        same_org=same_org
+                        same_org=False
                     )
                     
                     scenario = {
@@ -112,7 +111,6 @@ class AuthorizationPolicy:
                         'action': action,
                         'is_owner': is_owner,
                         'has_permission': has_permission,
-                        'same_org': same_org,
                         'expected': expected
                     }
                     
@@ -133,13 +131,13 @@ if __name__ == "__main__":
     result = policy.evaluate('owner', 'private', 'read', is_owner=True)
     print(f"Owner reads private file: {result}")  # Should be ALLOW
     
-    # Test 2: External user reads private file
-    result = policy.evaluate('external', 'private', 'read', is_owner=False)
-    print(f"External reads private file: {result}")  # Should be DENY
+    # Test 2: Anon viewer reads shared link
+    result = policy.evaluate('anon_link_viewer', 'shared_link_view', 'read', has_permission=True)
+    print(f"Anon viewer reads shared link: {result}")  # Should be ALLOW
     
-    # Test 3: Anyone reads public file
-    result = policy.evaluate('external', 'public', 'read', is_owner=False)
-    print(f"External reads public file: {result}")  # Should be ALLOW
+    # Test 3: Anon viewer writes shared view link
+    result = policy.evaluate('anon_link_viewer', 'shared_link_view', 'write', has_permission=True)
+    print(f"Anon viewer writes shared view link: {result}")  # Should be DENY
     
     # Generate all scenarios
     scenarios = policy.generate_all_scenarios()
@@ -149,7 +147,7 @@ if __name__ == "__main__":
     # save scenarios to a csv file for further analysis if needed
     import csv
     with open('scenarios.csv', 'w', newline='') as csvfile:
-        fieldnames = ['scenario_id', 'audience', 'visibility', 'action', 'is_owner', 'has_permission', 'same_org', 'expected']
+        fieldnames = ['scenario_id', 'audience', 'visibility', 'action', 'is_owner', 'has_permission', 'expected']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
         writer.writeheader()
