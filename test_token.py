@@ -5,9 +5,10 @@ import config
 print("Testing OneDrive API Access...\n")
 
 # Create the MSAL app
+# FIX: Use config.AUTHORITY_URL instead of building the URL manually
 app = PublicClientApplication(
     config.CLIENT_ID,
-    authority=f"https://login.microsoftonline.com/{config.TENANT_ID}"
+    authority=config.AUTHORITY_URL
 )
 
 # Get token interactively (will open browser)
