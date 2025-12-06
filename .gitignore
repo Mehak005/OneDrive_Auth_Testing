@@ -1,0 +1,4 @@
+config.py
+# ignore pycache files
+__pycache__/
+*.py[cod]
