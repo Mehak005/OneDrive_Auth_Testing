@@ -68,7 +68,7 @@ class OneDriveTestFramework:
                     'id': file_id,
                     'name': filename
                 }
-                print(f"  Created {visibility} file: {file_id[:8]}...")
+                print(f"  Created {filename} file: {file_id[:8]}...")
                 
                 # Apply sharing as needed
                 if visibility == "public_view_link":

@@ -21,7 +21,7 @@ def main():
         authority=config.AUTHORITY_URL
     )
 
-    scopes = ["Files.ReadWrite.All", "Sites.ReadWrite.All", "User.Read"]
+    scopes = config.SCOPES
     print("Opening browser for authentication...")
     result = app.acquire_token_interactive(scopes=scopes)
 

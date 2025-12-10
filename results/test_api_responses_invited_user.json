@@ -1,28 +1,29 @@
 [
   {
-    "status_code": 400,
+    "status_code": 404,
     "data": {}
   },
   {
-    "status_code": 400,
+    "status_code": 404,
     "data": {
       "error": {
-        "code": "invalidRequest",
-        "message": "The provided item ID is not valid for the requested drive",
+        "code": "itemNotFound",
+        "message": "Item does not exist",
+        "localizedMessage": "That item seems to be missing. Someone may have deleted or moved the item, or you may not have permission to view it.",
         "innerError": {
-          "date": "2025-12-06T22:32:12",
-          "request-id": "26bda8fd-0446-4e59-b48d-fdc4c6f66d5f",
-          "client-request-id": "26bda8fd-0446-4e59-b48d-fdc4c6f66d5f"
+          "date": "2025-12-08T16:28:51",
+          "request-id": "6a5cee63-3aa9-44bb-b587-bdb75962b921",
+          "client-request-id": "6a5cee63-3aa9-44bb-b587-bdb75962b921"
         }
       }
     }
   },
   {
-    "status_code": 400,
+    "status_code": 404,
     "data": {}
   },
   {
-    "status_code": 400,
+    "status_code": 404,
     "data": {}
   },
   {
@@ -36,9 +37,9 @@
         "code": "accessDenied",
         "message": "The sharing link no longer exists, or you do not have permission to access it.",
         "innerError": {
-          "date": "2025-12-06T22:32:19",
-          "request-id": "297242a1-8411-4cda-b844-6860e301d9f6",
-          "client-request-id": "297242a1-8411-4cda-b844-6860e301d9f6"
+          "date": "2025-12-08T16:28:57",
+          "request-id": "5243f617-4edd-42d1-9d0c-87162779fa81",
+          "client-request-id": "5243f617-4edd-42d1-9d0c-87162779fa81"
         }
       }
     }
@@ -62,9 +63,9 @@
         "code": "accessDenied",
         "message": "The sharing link no longer exists, or you do not have permission to access it.",
         "innerError": {
-          "date": "2025-12-06T22:32:28",
-          "request-id": "a38ca22e-cf00-489a-82de-d7dfd0ceae64",
-          "client-request-id": "a38ca22e-cf00-489a-82de-d7dfd0ceae64"
+          "date": "2025-12-08T16:29:05",
+          "request-id": "b1f25b4a-6a16-4aff-acdb-c64a1a2ff1b4",
+          "client-request-id": "b1f25b4a-6a16-4aff-acdb-c64a1a2ff1b4"
         }
       }
     }
@@ -81,14 +82,14 @@
     "status_code": 200,
     "data": {
       "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#shares('u%21aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9kMThhMTdkODlmNTQ3NDIzL0FUeXdaSXZyUTBsSGdlcmVnV3Y0ZlBn')/driveItem/$entity",
-      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=8b64b03c-43eb-4749-81ea-de816bf87cf8&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MDYzOTU0In0.GKQMly8mLDcl3pnCfunhrnnUKtW1C6visYeV2WAwO2neo9jkQZeEL9mSvj49r_STEbUTpEWpcaH8HQl03AervF-uP6Yle8buS2qgiwCwROhkW_mHotCMoryVUovn7g9s2RXUOdU6GhzytGr0QhzweReWU6SUr1QtjEg2A9CXxY2YQ9Kkcke7H_zz57MtDtu38awO026ZuSrJ4FAATfKvY91Dhlui8mgdROor2Wh9k1_ktAyCkoFbUoqNNBxs1xD2aUai6M8zTi_lRTN1c04o56y4QakyFFDMs-ZDWz5ofKVkQkaE39CYNbK_ooRISVyipJ1mtKv8z6scL9lop0ShDbvo5iZIe78aqZwZtC3nEpfX90wSToyV8nG5LaulAmd8zaSm_ysZMrObthrBZAIdLEPLAm9qWI--eUMxWuny2zMFcEfIOgj6EU2-tR_n19slK7e5EzMCdx9Ee6OGmJeUjQ.jbYJuBXXxEXJGVZnJ_VekwF4q_cqw-01jVgdKBgC9Xc&ApiVersion=2.0",
+      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=8b64b03c-43eb-4749-81ea-de816bf87cf8&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MjE0OTUwIn0.KKV9JXh9pxE0GlzCc9azrm9tj2YO2fZf_JZV6Lx-_wRGnzXnwTE12KrCtt5z4oJh9UTsOMtCHc-ifrSrjnk8ApkZ_nMCqLyPEKeRy9T1vjPxg8tkEEvY_CX2buIQZ1v6M1yzJH1HcmWhzb6eDqBTqK3439jqBUtMMvzJynrP4M66xhuSnV_tgW2lNhITFdDVVsOpeSig7wtyKMCWz6eH39x3KJmGBFuNDe0oWVvCOctSwB0714H4m__d51gnWvSOVSpC8f1ssen7rjE7G1EJtqJyRW9zKvexHuK0GUoiGQuxYKMO8hoRO3GzuSs_HYOLHRNXv-wwurTok_LvCiXfU9_3xUmEFly5nmLCfoL7iGy5-IwGqIINWoLbpVTE_DvcZYrZ4hsSBxX7wvGwNWNMHcGoF4e3c262YErqZHxufw-m5rqI0J5wGU1j_I4xegq3Nw07wEC3J70adXqyByxdyw.e3_LcMc0GTbNx-TJhm7ekibx3R6GZYscsC-H5OKrtTs&ApiVersion=2.0",
       "createdDateTime": "2025-12-06T22:18:44Z",
-      "eTag": "\"{8B64B03C-43EB-4749-81EA-DE816BF87CF8},14\"",
+      "eTag": "\"{8B64B03C-43EB-4749-81EA-DE816BF87CF8},20\"",
       "id": "D18A17D89F547423!s8b64b03c43eb474981eade816bf87cf8",
-      "lastModifiedDateTime": "2025-12-06T22:32:06Z",
+      "lastModifiedDateTime": "2025-12-08T16:28:45Z",
       "name": "collab_file.txt",
       "webUrl": "https://onedrive.live.com?cid=d18a17d89f547423&id=D18A17D89F547423!s8b64b03c43eb474981eade816bf87cf8",
-      "cTag": "\"c:{8B64B03C-43EB-4749-81EA-DE816BF87CF8},7\"",
+      "cTag": "\"c:{8B64B03C-43EB-4749-81EA-DE816BF87CF8},10\"",
       "size": 15,
       "createdBy": {
         "application": {
@@ -128,7 +129,7 @@
       },
       "fileSystemInfo": {
         "createdDateTime": "2025-12-06T22:18:44Z",
-        "lastModifiedDateTime": "2025-12-06T22:32:06Z"
+        "lastModifiedDateTime": "2025-12-08T16:28:45Z"
       },
       "shared": {
         "scope": "users",
@@ -146,14 +147,14 @@
     "status_code": 200,
     "data": {
       "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#shares('u%21aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9kMThhMTdkODlmNTQ3NDIzL0FUeXdaSXZyUTBsSGdlcmVnV3Y0ZlBn')/driveItem/$entity",
-      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=8b64b03c-43eb-4749-81ea-de816bf87cf8&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MDYzOTU2In0.ep1A32HGtl23M3MFtYFvDFzcuSZIrH0ToMbKPej8A8GT1suTKbdF2eNDK3Fqk41lVrVlDT6HPlVN_tkn364-9PAwvOSTV269dC8nnY0NDSX2t09aJs2Oa1LElQ9ymO5GbWuiyC9Oc-EyHiGPt7x8gADQkPQtCHyd0DmY8mt9XlZTpNLW1dw32J4ywliR1MYeyaV34gW-jAaoNXzGnpHL7W4o9F7QoMGeezO3HvSEK3kCkTZyJUxKmFGs75lYAC0Zn9oJIDh4hWPQrVUzNEvpE3g-8qC1MadYBXMQtf_KFhXTY8r7DyM4vXCUX0GA3Dms6xdyJyB-9KTF_sRwPn80lg5J2Or5NYeoEwDDNvjNTpQhapqW3--bpiv2H17gnN_2p-6sy8YmDJ9E_rXZN5xoY7nQ3jnWG0Rd53KVaY_6GOwg5SD4o4359gmB3HWrZtVsKnuFiKDDSenoNB3kU8KL1w.BcZuWk5oG9zMWYBphRjEhVzadb_z1UH-ifu5AkmXSWA&ApiVersion=2.0",
+      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=8b64b03c-43eb-4749-81ea-de816bf87cf8&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MjE0OTUyIn0.jkCaxpIxxhdXvz9bfXDNa_SuKL82HxLwHRC1E1T7u_m4AkoEAzG3Br97YRvqkpyTcP70wtd4z8y86EB0DYyE9761zUfllHxLsYVkpUqN7zMHeuzSToVZJtvFIShewHwagX2ekIh2m1hgDJAusu9cVHN2AT8sq-JwM4MCYK2E3VGFAcOFlYduFwxT-71p7NLMCHor_X2sRhg0Vwj29WAikNKZEtnScj7RwmZrQADS_e5mHjCEgqWbcY7ngpaGfC8o0zkezzPiOwzVQSipC-STsIlXTriv5k2AXcUldrX0dqf8Pd8ERj7FP_u6Ehjyj3lHUwAkjylBZfuLuBrwyaNpU3aCefnCgyTrV63XVjTjjoTpk730K_pTGk1_l1T8iOnTn1hn2Ql8Vu8zOAENsAsKxcmqo_igbjZts7QspuT4cZGwTQM9iVxPByFrr46MHYEPZW7c-CI7pqNgi4bjevIrBA.0H75DP1X1uoOQHOnun6XODg8CVuykXRVWTYy7urAoE0&ApiVersion=2.0",
       "createdDateTime": "2025-12-06T22:18:44Z",
-      "eTag": "\"{8B64B03C-43EB-4749-81EA-DE816BF87CF8},15\"",
+      "eTag": "\"{8B64B03C-43EB-4749-81EA-DE816BF87CF8},21\"",
       "id": "D18A17D89F547423!s8b64b03c43eb474981eade816bf87cf8",
-      "lastModifiedDateTime": "2025-12-06T22:32:37Z",
+      "lastModifiedDateTime": "2025-12-08T16:29:12Z",
       "name": "collab_file.txt",
       "webUrl": "https://onedrive.live.com?cid=d18a17d89f547423&id=D18A17D89F547423!s8b64b03c43eb474981eade816bf87cf8",
-      "cTag": "\"c:{8B64B03C-43EB-4749-81EA-DE816BF87CF8},8\"",
+      "cTag": "\"c:{8B64B03C-43EB-4749-81EA-DE816BF87CF8},11\"",
       "size": 15,
       "createdBy": {
         "application": {
@@ -193,7 +194,7 @@
       },
       "fileSystemInfo": {
         "createdDateTime": "2025-12-06T22:18:44Z",
-        "lastModifiedDateTime": "2025-12-06T22:32:37Z"
+        "lastModifiedDateTime": "2025-12-08T16:29:12Z"
       },
       "shared": {
         "scope": "users",
@@ -211,14 +212,14 @@
     "status_code": 200,
     "data": {
       "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#shares('u%21aHR0cHM6Ly8xZHJ2Lm1zL3QvYy9kMThhMTdkODlmNTQ3NDIzL0FUeXdaSXZyUTBsSGdlcmVnV3Y0ZlBn')/driveItem/$entity",
-      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=8b64b03c-43eb-4749-81ea-de816bf87cf8&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MDYzOTU4In0.Nst-JpmgSDJpQw7iwmmnU_enHnqxJHurN9pvXmXD5vCKtgrvUk_cZX-FQ3OU5cU3USfMb1bcSZHNk0B8VW0goC91Qc6V0Ty9GxPDfi4jV9Ul1GyWnDYjZ0i0AFYD2QVP2ATuJZp2YYTt41n29iJNNYyZyBzK4JUfSRl2MuI2QCq8g1lMDNCAaZaiYzDVRE0s2qiqI972CNYHy_y7qwgeRjyva5DLfunc9SORuZYfF47ZMpRxIngPOAa8FFOzZfHwgXaaADNyV6IExtdsZC9SL7OzZAWmiQhFzPQ2yUBDbhoJVhIvA8G-eM4dW7EljwIb1ZTeYuk1et_1oSQsXEWQfOmnoRV-rJypLFIkf4Oc8DKjHebMVCB-T5QVKP4SD2_xOJGyjfy6PQPKfU18R8A9uZvbVmdupD3aSUGCZ5TP4XNX0S8NlmhV2H1X1f2O0_QfFRwMetUjSJqsbVyvY-gApQ.UbktxdlnfVtpZZNokasx6ow7SO9Idt70sH5wXjroL2k&ApiVersion=2.0",
+      "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/D18A17D89F547423/_layouts/15/download.aspx?UniqueId=8b64b03c-43eb-4749-81ea-de816bf87cf8&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJmNWU1YjJkMy01NmMwLTQzOTItYjg0Mi0yNjkwNTMwYmMwNTQiLCJhcHBfZGlzcGxheW5hbWUiOiJBdXRob3JpemF0aW9uIFRlc3RpbmcgRnJhbWV3b3JrIiwiYXBwaWQiOiIwOGYyMjU2My02N2E2LTRiNGYtYWVkNC05NDk3MDQwMDI2ZGIiLCJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJleHAiOiIxNzY1MjE0OTU0In0._tvpacV22ZahU4u1xMbhdekm7vZl_tTfjcx_soXUYI44cvhLlMiph4kePELXB3OnxJRB0HAQ0MQOflqPcD7YKiF2v9dnpxSpJXL3Aq8_dYFhBNaXvOZB3z5BEOwQkrEvjA_BRsdmHPgdBMHOca58iY1mH5e-9p728iwtU3XGzs-t5WuunTxo2DdVj11aeGsL5xYDEbSXGuvKMpdp-Fw0X9_phbr-VJqUBcbg9eM-KEb_yDdoR-at7eaF2566J1RIy5a1DHURP-vDx7xrNWumokhL80MOgkeHpSDdIf6htZNAj4UM0Pd8LFAp1esqrsTXBVvAxBna3YQYAf8HoHl59nvfmihTUJ-ycXz_RRZ45Tm20Pa9P8cBOXy3dP_hUCOWHoeMun_m6dkNsrOgYqDyHZh_9LH0-bp2Wg1kLwSQmEotZfZz_1-x4GoIoQvCZwtVynpAEQrzyEAp_QI3p82DCA.hmKiow2OOD2uQEVvZ5i7JYuP48OdzCtOQddpusOb7tA&ApiVersion=2.0",
       "createdDateTime": "2025-12-06T22:18:44Z",
-      "eTag": "\"{8B64B03C-43EB-4749-81EA-DE816BF87CF8},15\"",
+      "eTag": "\"{8B64B03C-43EB-4749-81EA-DE816BF87CF8},21\"",
       "id": "D18A17D89F547423!s8b64b03c43eb474981eade816bf87cf8",
-      "lastModifiedDateTime": "2025-12-06T22:32:37Z",
+      "lastModifiedDateTime": "2025-12-08T16:29:12Z",
       "name": "collab_file.txt",
       "webUrl": "https://onedrive.live.com?cid=d18a17d89f547423&id=D18A17D89F547423!s8b64b03c43eb474981eade816bf87cf8",
-      "cTag": "\"c:{8B64B03C-43EB-4749-81EA-DE816BF87CF8},8\"",
+      "cTag": "\"c:{8B64B03C-43EB-4749-81EA-DE816BF87CF8},11\"",
       "size": 15,
       "createdBy": {
         "application": {
@@ -258,7 +259,7 @@
       },
       "fileSystemInfo": {
         "createdDateTime": "2025-12-06T22:18:44Z",
-        "lastModifiedDateTime": "2025-12-06T22:32:37Z"
+        "lastModifiedDateTime": "2025-12-08T16:29:12Z"
       },
       "shared": {
         "scope": "users",

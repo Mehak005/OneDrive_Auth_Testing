@@ -9,6 +9,12 @@ This project probes authorization behavior on a **personal** OneDrive using Micr
 - **Test harness:** `test_framework.py` sets up four files, applies sharing (view/edit links, direct invite), then runs all policy scenarios per audience and records results/responses.
 - **Tokens:** Uses three tokens (owner, invited user, normal user) loaded from `owner_token.txt`, `collab_token.txt`, `external_token.txt`. Tokens are acquired with `test_token.py <outfile>`, which runs MSAL interactive auth.
 
+## Policy and Factors
+- **Audiences:** `owner` (token holder), `invited_user` (direct invitee on `collab_file.txt`), `normal_user` (no sharing).
+- **Visibilities:** `private` (no sharing), `public_view_link` (anonymous view link), `public_edit_link` (anonymous edit link), `collab_invite` (direct invite with write role).
+- **Actions:** `read`, `write`, `delete`, `share`.
+- **Expected behavior:** owner ALLOW everything; view link allows read only (when accessed via link), edit link allows read/write, direct invite allows read/write, others DENY.
+
 ## Experimental Setup
 - **Environment:** Python with `requests`, MSAL (`msal`), and access to Microsoft Graph for a personal account.
 - **Files created:** `private_file.txt` (no sharing), `public_view.txt` (anonymous view link), `public_edit.txt` (anonymous edit link), `collab_file.txt` (direct invite with write role).
