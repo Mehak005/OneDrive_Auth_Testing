@@ -1,9 +1,3 @@
-# test_framework.py
-"""
-OneDrive Authorization Testing Framework
-
-Main framework for testing authorization enforcement in OneDrive
-"""
 
 import json
 import time
@@ -27,7 +21,6 @@ class OneDriveTestFramework:
         self.policy = AuthorizationPolicy()
         self.client = OneDriveClient(access_token)
         self.test_results = []
-        self.test_api_responses = []
         self.test_files = {}  # Store created test files
     
     def setup_test_environment(self):
@@ -106,15 +99,7 @@ class OneDriveTestFramework:
         print("=" * 70 + "\n")
     
     def test_scenario(self, scenario):
-        """
-        Test a single authorization scenario
         
-        Args:
-            scenario: Dictionary with scenario details
-        
-        Returns:
-            Dictionary with test results
-        """
         visibility = scenario['visibility']
         action = scenario['action']
         expected = scenario['expected']
@@ -160,9 +145,7 @@ class OneDriveTestFramework:
             else:
                 response = {'status_code': 400}
             
-            # Determine actual result based on status code
-            # 200, 201 = success (ALLOW)
-            # 400, 403, 404 = forbidden/not found/invalid for drive (DENY)
+            
             if response['status_code'] in [200, 201]:
                 actual = 'ALLOW'
             elif response['status_code'] in [400, 403, 404]:
@@ -204,7 +187,6 @@ class OneDriveTestFramework:
             result, response = self.test_scenario(scenario)
             time.sleep(0.75) 
             self.test_results.append(result)
-            self.test_api_responses.append(response)
             
             # Print progress
             status = "PASS" if result['passed'] else "FAIL"
@@ -291,9 +273,6 @@ class OneDriveTestFramework:
         with open(filename, 'w') as f:
             json.dump(export_data, f, indent=2)
         
-        with open(f'results/test_api_responses_{self.audience}.json', 'w') as f:
-            json.dump([r for r in self.test_api_responses], f, indent=2)
-        
         print(f"\nResults exported to: {filename}")
 
 
@@ -323,29 +302,21 @@ if __name__ == "__main__":
     # Run tests
     owner_framework.setup_test_environment()
     time.sleep(2)  # Give OneDrive time to process files
-    test_all = True
-    if test_all:
-        owner_framework.run_tests(audience='owner')
-        invited_framework.test_files = owner_framework.test_files
-        normal_framework.test_files = owner_framework.test_files
-        invited_framework.run_tests(audience='invited_user')
-        normal_framework.run_tests(audience='normal_user')
-        print("\n" + "=" * 70)
-        print("TESTS COMPLETED")
-        print("=" * 70 + "\n")
-        owner_framework.analyze_results()
-        owner_framework.export_results()
-        invited_framework.analyze_results()
-        invited_framework.export_results()
-        normal_framework.analyze_results()
-        normal_framework.export_results()
-    else:
-        policy = AuthorizationPolicy()
-        scenarios = policy.generate_all_scenarios()
-        scenario = scenarios[0]  # Test first scenario only
-        result = owner_framework.test_scenario(scenario)
-        print("\nSingle Scenario Test Result:")
-        print(json.dumps(result, indent=2))
+    
+    owner_framework.run_tests(audience='owner')
+    invited_framework.test_files = owner_framework.test_files
+    normal_framework.test_files = owner_framework.test_files
+    invited_framework.run_tests(audience='invited_user')
+    normal_framework.run_tests(audience='normal_user')
+    print("\n" + "=" * 70)
+    print("TESTS COMPLETED")
+    print("=" * 70 + "\n")
+    owner_framework.analyze_results()
+    owner_framework.export_results()
+    invited_framework.analyze_results()
+    invited_framework.export_results()
+    normal_framework.analyze_results()
+    normal_framework.export_results()
     
     print("\n" + "=" * 70)
     print("TESTING COMPLETE")

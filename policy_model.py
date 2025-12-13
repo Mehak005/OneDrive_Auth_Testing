@@ -1,13 +1,4 @@
-# policy_model.py
-"""
-Authorization Policy Model for OneDrive
 
-Defines expected authorization rules for a *personal* OneDrive test matrix:
-- Audiences: owner, invited_user (abc@example.com), normal_user (no sharing)
-- Visibilities: private file, public view link, public edit link, direct invite
-- Actions: read, write, delete, share
-- Context: whether the audience effectively has permission for that visibility
-"""
 
 class AuthorizationPolicy:
     """Defines expected authorization behavior"""
@@ -19,9 +10,7 @@ class AuthorizationPolicy:
     
     def evaluate(self, audience, visibility, action, is_owner=False, 
                  has_permission=False, same_org=False):
-        """
-        Evaluate if an action should be allowed based on policy rules.
-        
+        """        
         Args:
             audience: Type of user (owner, invited_user, normal_user)
             visibility: File visibility (private, public_view_link, public_edit_link, collab_invite)
@@ -62,7 +51,7 @@ class AuthorizationPolicy:
         
         # Rule 5: Direct invite to collaborator
         if visibility == 'collab_invite':
-            if has_permission and action in ['read', 'write']:
+            if has_permission and action in ['read', 'write', 'delete', 'share']:
                 return 'ALLOW'
             return 'DENY'
         
