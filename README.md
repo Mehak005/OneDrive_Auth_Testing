@@ -11,7 +11,7 @@ This project probes authorization behavior on a OneDrive using Microsoft Graph. 
 
 ## Policy and Factors
 - **Audiences:** `owner` (token holder), `invited_user` (direct invitee on `collab_file.txt`), `normal_user` (no sharing).
-- **Visibilities:** `private` (no sharing), `public_view_link` (anonymous view link), `public_edit_link` (anonymous edit link), `collab_invite` (direct invite with write role).
+- **Visibilities:** `private` (no sharing), `public_view_link` (anonymous view link), `public_edit_link` (anonymous edit link), `collab_invite` (direct invite to edit a file).
 - **Actions:** `read`, `write`, `delete`, `share`.
 - **Expected behavior:** owner ALLOW everything; view link allows read only (when accessed via link), edit link allows read/write, direct invite allows read/write, others DENY.
 
